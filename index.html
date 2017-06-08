@@ -14,18 +14,18 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/sunlime.css" id="theme">
+		<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../reveal.js/css/theme/sunlime.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
@@ -53,7 +53,7 @@
 					</p>
 				</section>
 
-				<section data-background="$green">
+				<section data-background="#96b532">
 					<h1>Web Security</h1>
 					<h3>Eine Präsentation für den Rotary Club Leibnitz</h3>
 					<h4>Gasthof Rupp, 12.06.2017, 20:00 Uhr</h4>
@@ -89,6 +89,71 @@
 					<h1>Zeitplan</h1>
 					<p>30 Minuten Präsentation</p>
 					<p>anschließend Fragen und Diskussion</p>
+				</section>
+
+				<section>
+					<section data-background="#96b532">
+						<h1>Wie sicher ist das Web?</h1>
+					</section>
+
+					<section data-background="#ffd50e">
+						<h2>Wie das Auenland?</h2>
+						<p><img data-src="https://i.ytimg.com/vi/vkig1vyZXX8/maxresdefault.jpg"></p>
+					</section>
+
+					<section>
+						<h2>Eher so!</h2>
+						<p><img data-src="https://atolkienistperspective.files.wordpress.com/2014/03/minas-morgul-orcs.jpg"></p>
+					</section>
+					<section id="fragments">
+						<h3><a href="https://www.rapid7.com/fundamentals/types-of-attacks/">Verschiedene Strategien und Arten von Angriffen</a></h3>
+						<ul>
+							<li class="fragment">Malware</li>
+							<aside class="notes">Antivirus Warnung im Browser, bösartiger E-Mail Anhang installiert Viren oder Ransomware am Computer</aside>
+							<li class="fragment">Phishing</li>
+							<li class="fragment">SQL Einschleusung Angriff (SQL Injecion)</li>
+							<li class="fragment">Cross-Site Scripting (XSS)</li>
+							<aside class="notes">Malware läuft nur im Browser des Besuchers und greift den Besucher direkt an</aside>
+							<li class="fragment">Session Hijacking und Man-in-the-Middle Attacks</li>
+							<li class="fragment">Credential Reuse</li>
+							<li class="fragment">Denial of Service</li>
+						</ul>
+					</section>
+
+					<section id="fragments">
+						<h2>Enormer Anstieg von Angriffen</h2>
+						<h3 class="fragment">Riesige DDOS Attacken</h3>
+						<ul>
+							<li class="fragment"><a href="https://servercomparator.com/vpn/blog/dyn-mirai-ddos-complete-story">DYN</a></li>
+							<li class="fragment"><a href="http://www.telegraph.co.uk/technology/2016/11/04/unprecedented-cyber-attack-takes-liberias-entire-internet-down/">Liberia</a></li>
+							<li class="fragment">Mirai Botnet and IoT</li>
+							<li class="fragment">Oft nur 1 Angreifer</li>
+							<li class="fragment">Beeinflussung von Wahlen</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Denial of Service in Action</h2>
+						<iframe data-src="http://map.norsecorp.com/#/explore"></iframe>
+					</section>
+					<section>
+						<h2>Was können wir tun?</h2>
+						<p><img data-src="https://i0.wp.com/www.tor.com/wp-content/uploads/2015/10/Frodo01.jpg?fit=740%2C%209999&crop=0%2C0%2C100%2C389px"></p>
+					</section>
+
+					<section>
+						<h2>Maßnahmen setzen!</h2>
+						<p><img data-src="https://s-media-cache-ak0.pinimg.com/736x/0b/19/7e/0b197ec7220b5e03aeb96f17bbfc611c.jpg"></p>
+					</section>
+				</section>
+
+				<section>
+					<section data-background="#96b532">
+						<h1>Wie kann ich mich schützen?</h1>
+					</section>
+					<section data-background="#96b532">
+						<h2>1. HTTPS</h2>
+						<h3>Hypertext Transfer Protocol Secure</h3>
+					</section>
 				</section>
 
 				<!-- Example of nested vertical slides -->
@@ -199,18 +264,18 @@
 					<p>
 						reveal.js comes with a few themes built in: <br>
 						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>  -
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sunlime.css'); return false;">Sunlime</a>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/black.css'); return false;">Black (default)</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/white.css'); return false;">White</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/league.css'); return false;">League</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/sky.css'); return false;">Sky</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/beige.css'); return false;">Beige</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/simple.css'); return false;">Simple</a> <br>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/serif.css'); return false;">Serif</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/blood.css'); return false;">Blood</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/night.css'); return false;">Night</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/moon.css'); return false;">Moon</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/solarized.css'); return false;">Solarized</a>  -
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/sunlime.css'); return false;">Sunlime</a>
 					</p>
 				</section>
 
@@ -416,8 +481,8 @@ Reveal.addEventListener( 'customevent', function() {
 
 		</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+		<script src="../reveal.js/lib/js/head.min.js"></script>
+		<script src="../reveal.js/js/reveal.js"></script>
 
 		<script>
 
@@ -432,12 +497,12 @@ Reveal.addEventListener( 'customevent', function() {
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
+					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../reveal.js/plugin/notes/notes.js', async: true }
 				]
 			});
 
