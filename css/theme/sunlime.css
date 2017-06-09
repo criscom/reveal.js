@@ -308,6 +308,15 @@ body {
   width: 100%;
   height: 400px; }
 
+.inactive {
+  color: #545d66; }
+
+table thead {
+  font-size: 0.8em !important; }
+
+table tr td {
+  font-size: 0.5em !important; }
+
 .reveal h1,
 .reveal h2,
 .reveal h3,

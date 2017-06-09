@@ -19,6 +19,22 @@ module.exports = function(grunt) {
 				' */'
 		},
 
+		'string-replace': {
+			dist: {
+				files : {
+					'index.html': 'index.html'
+				}
+			},
+			options: {
+				replacements: [
+					{
+						pattern: /\.\.\/reveal\.js\//g,
+						replacement: ''
+					}
+				]
+			}
+		},
+
 		qunit: {
 			files: [ 'test/*.html' ]
 		},
@@ -164,9 +180,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-autoprefixer' );
 	grunt.loadNpmTasks( 'grunt-zip' );
 	grunt.loadNpmTasks( 'grunt-retire' );
+	grunt.loadNpmTasks( 'grunt-replace' );
+	grunt.loadNpmTasks( 'grunt-string-replace' );
+
 
 	// Default task
-	grunt.registerTask( 'default', [ 'css', 'js' ] );
+	grunt.registerTask( 'default', [ 'css', 'js', 'string-replace' ] );
 
 	// JS task
 	grunt.registerTask( 'js', [ 'jshint', 'uglify', 'qunit' ] );
@@ -188,5 +207,8 @@ module.exports = function(grunt) {
 
 	// Run tests
 	grunt.registerTask( 'test', [ 'jshint', 'qunit' ] );
+
+	// string-replace
+	grunt.registerTask ( 'string-replace' [ 'string-replace']);
 
 };
