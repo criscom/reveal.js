@@ -83,6 +83,18 @@ $mainFont: 'Exo 2', Impact, sans-serif;
   height: 400px;
 }
 
+.inactive {
+  color: $linkColorHover;
+}
+
+table thead {
+  font-size: 0.8em !important;
+}
+
+table tr td {
+  font-size: 0.5em !important;
+}
+
 // Font Family
 
 .reveal {
