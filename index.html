@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Web Security - Passwörter und HTTPS</title>
+
+		<meta name="description" content="Eine Präsentation für den Rotary Club Leibnitz">
+		<meta name="author" content="Christoph Potzinger">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../reveal.js/css/theme/sunlime.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Live preview</h2>
+					<iframe data-src="http://map.norsecorp.com/#/explore"></iframe>
+					<p>Globale Denial of Service Attacken</p>
+				</section>
+
+				<section>
+					<h1>Herzlich Willkommen!</h1>
+					<h3>und Danke für die Einladung</h3>
+					<p>
+					</p>
+				</section>
+
+				<section data-background="#96b532">
+					<h1>Web Security</h1>
+					<h3>Eine Präsentation für den Rotary Club Leibnitz</h3>
+					<h4>Gasthof Rupp, 12.06.2017, 20:00 Uhr</h4>
+					<p>
+						<small>Von: <a href="http://www.criscom.at">Christoph Potzinger</a> / <a href="http://twitter.com/criscom">@criscom</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h1>Christoph Potzinger</h2>
+					<h2>
+						Sunline Web Innovations GmbH
+					</h2>
+					<p>
+						<small> <a href="https://www.sunlime.at">https://www.sunlime.at</a> / <a href="http://twitter.com/sunlimeit">@sunlimeit</a></small>
+				</section>
+
+				<section>
+					<h1>Überblick</h1>
+					<ul>
+						<li class="fragment">Wie sicher ist das Web?</li>
+						<li class="fragment">Wie kann ich mich schützen?
+						<ul>
+							<li class="fragment">HTTPS</li>
+							<li class="fragment">Passwörter</li>
+							<li class="fragment">Apps</li>
+						</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Zeitplan</h1>
+					<p>30 Minuten Präsentation</p>
+					<p>anschließend Fragen und Diskussion</p>
+				</section>
+
+				<section>
+					<section data-background="#96b532">
+						<h1>Wie sicher ist das Web?</h1>
+					</section>
+
+					<section data-background="#ffd50e">
+						<h2>Wie das Auenland?</h2>
+						<p><img data-src="https://i.ytimg.com/vi/vkig1vyZXX8/maxresdefault.jpg"></p>
+					</section>
+
+					<section>
+						<h2>Eher so!</h2>
+						<p><img data-src="https://atolkienistperspective.files.wordpress.com/2014/03/minas-morgul-orcs.jpg"></p>
+					</section>
+					<section>
+						<h3>Verschiedene Strategien und Arten von Angriffen</h3>
+						<a href="https://www.rapid7.com/fundamentals/types-of-attacks/">Link</a>
+						<ul>
+							<li class="fragment">Malware</li>
+							<li class="fragment">Phishing</li>
+							<li class="fragment">SQL Einschleusung Angriff (SQL Injecion)</li>
+							<li class="fragment">Cross-Site Scripting (XSS)</li>
+							<li class="fragment">Session Hijacking und Man-in-the-Middle Attacks</li>
+							<li class="fragment">Credential Reuse</li>
+							<li class="fragment">Denial of Service</li>
+							<aside class="notes">Malware: Antivirus Warnung im Browser, bösartiger E-Mail Anhang installiert Viren oder Ransomware am Computer<br />
+							XSS: Malware läuft nur im Browser des Besuchers und greift den Besucher direkt an</aside>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Enormer Anstieg von Angriffen</h2>
+						<h3 class="fragment">Riesige DDOS Attacken</h3>
+						<ul>
+							<li class="fragment"><a href="https://servercomparator.com/vpn/blog/dyn-mirai-ddos-complete-story">DYN</a></li>
+							<li class="fragment"><a href="http://www.telegraph.co.uk/technology/2016/11/04/unprecedented-cyber-attack-takes-liberias-entire-internet-down/">Liberia</a></li>
+							<li class="fragment">Mirai Botnet and IoT</li>
+							<li class="fragment">Oft nur 1 Angreifer</li>
+							<li class="fragment">Beeinflussung von Wahlen</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Denial of Service in Action</h2>
+						<iframe data-src="http://map.norsecorp.com/#/explore"></iframe>
+					</section>
+					<section>
+						<h2>Was können wir tun?</h2>
+						<p><img data-src="https://i0.wp.com/www.tor.com/wp-content/uploads/2015/10/Frodo01.jpg?fit=740%2C%209999&crop=0%2C0%2C100%2C389px"></p>
+					</section>
+
+					<section>
+						<h2>Take action!</h2>
+						<p><img data-src="https://s-media-cache-ak0.pinimg.com/736x/0b/19/7e/0b197ec7220b5e03aeb96f17bbfc611c.jpg"></p>
+					</section>
+				</section>
+
+				<section>
+					<section data-background="#96b532">
+						<h1>Wie kann ich mich schützen?</h1>
+					</section>
+					<section data-background="#96b532">
+						<h1>HTTPS</h1>
+						<blockquote>Any new site or web application should be built with HTTPS out of the box.</blockquote>
+						<p>— Scott Helme</p>
+						<aside class="notes">Rüsten Sie Ihre Websites mit einem HTTPS Zertifikat auf. Hier eine </aside>
+					</section>
+					<section>
+						<h2>HTTP</h2>
+						<h3>Hypertext Transfer Protocol</h3>
+						<p>Ungeschützter, unverschlüsselter Datenaustausch</p>
+						<aside class="notes">HTTP (Hypertext Transfer Protocol) ist das Standardprotokoll für das Bereitstellen von Websites und für den Datenaustausch. Jedoch erfolgt dieser Datenaustausch ungeschützt und nicht verschlüsselt.</aside>
+					</section>
+					<section data-transition="fade-in fade-out">
+						<h2>HTTPS</h2>
+						<h3>Hypertext Transfer Protocol Secure</h3>
+						<p>Schützt Datenaustausch durch TLS</p>
+						<aside class="notes">HTTPS kombiniert HTTP mit TLS (einem kryptografischen Protokoll) und schützt Daten, die über das Netz ausgetauscht werden, durch Verschlüsselung.</aside>
+					</section>
+					<section data-transition="fade-in fade-out">
+						<h2> Warum HTTPS?</h2>
+						<aside class="notes">Warum soll man HTTPS verwenden, wenn der Inhalt einer Website ohnehin öffentlich ist?
+						</aside>
+					</section>
+					<section data-transition="fade-in fade-out">
+						<h2> Warum HTTPS?</h2>
+						<ul>
+							<li>Verschlüsselt Passwörter</li>
+							<li class="fragment">Schützt davor, falsche Inhalte zu erhalten</li>
+							<li class="fragment">Beugt SQL Injections vor</li>
+						</ul>
+						<aside class="notes"><ul>
+						<li>Wenn man ein CMS wie zB Wordpress für seine Website verwendet, werden bei HTTP die Zugangsdaten in Reintext zum Server gesendet. Jeder Benutzer, der sich im entsprechenden WLAN befindet oder die Internetverbindung abhört (durch im Netz frei zugängliche Tools), kann diese Daten auslesen und sich dadurch leichten Zugang zum CMS verschaffen. Ganz gefährlich sind dabei öffentliche WLANs wie zB jene in Cafés, Restaurants oder Hotels.</li>
+						<li>Wenn HTTPS korrekt implementiert wurde, können Angreifer nicht mehr das DNS übernehmen, um andere Inhalte auf der Domain auszuliefern.</li>
+						<li>Illegal installierte Software auf Computern kann keine Werbung oder Malware auf Webseiten einspeisen.</li>
+						</ul>
+						</aside>
+					</section>
+					<section data-transition="fade-in fade-out">
+						<h2> Vorteile von HTTPS</h2>
+						<ul>
+							<li>Schneller als HTTP</li>
+						</ul>
+						<aside class="notes">Ein jeder Test lädt 360 unterschiedliche, nicht-gecachte Bilder mit einer Gesamtgröße von 0.62 MB.<br />
+						</aside>
+						<p><iframe data-src="http://www.httpvshttps.com/"></iframe>
+					</section>
+					<section data-transition="fade-in fade-out">
+						<h2> Vorteile von HTTPS</h2>
+						<ul>
+							<li>Sicherer als HTTP
+							<ul>
+								<li>1. Unterbindet Inhaltseinschleusungen von Dritten</li>
+							</ul>
+							</li>
+						</ul>
+						<p class="fragment"><img height="360" data-src="https://jonathanmayer.github.io/stable/blog_images/att_wifi/stanford.png"></p>
+						<aside class="notes">1. Werbung wird über ein Öffentliches WLAN auf eine Website eingeschleust.
+						</aside>
+					</section>
+
+					<section data-transition="fade-in fade-out">
+						<h2> Vorteile von HTTPS</h2>
+						<ul>
+							<li>Sicherer als HTTP
+							<ul>
+								<li>2. Unterbindet Malware Einschleusung</li>
+							</ul>
+							</li>
+						</ul>
+						<aside class="notes">
+						2. Böswillige Inhalte werden in den Browser des Besuchers eingeschleust. <br /></aside>
+					</section>
+
+					<section data-transition="fade-in fade-out">
+						<h2> Vorteile von HTTPS</h2>
+						<ul>
+							<li>Bessere SEO Rankings</li>
+						</ul>
+						<aside class="notes">HTTPS ist seit 2014 ein Faktor in Google's Reihungsalgorhythmen<br />
+						</aside>
+					</section>
+
+					<section data-transition="fade-in fade-out">
+						<h2> Vorteile von HTTPS</h2>
+						<ul>
+							<li>Keine Browserwarnungen</li>
+						</ul>
+						<aside class="notes">Es ist möglich, dass Browser eine Warnung zeigen, wenn die Website über HTTP ausgeliefert wird.<br />
+						</aside>
+					</section>
+
+					<section data-transition="fade-in fade-out">
+						<h2> Vorteile von HTTPS</h2>
+						<ul>
+							<li>Mehr Funktionen</li>
+						</ul>
+						<aside class="notes">
+						Bestimmte Browser Features werden für HTTP gesperrt (zB Geräte-Orientierung, Fullscreen, Geolocation etc.)<br />
+						</aside>
+					</section>
+
+					<section data-transition="fade-in fade-out">
+						<h2> Vorteile von HTTPS</h2>
+						<ul>
+							<li>Bessere Seitenverweisen</li>
+						</ul>
+						<p>&nbsp;</p>
+						<table class="pure-table">
+							<thead>
+								<tr><th>Quelle</th><th>Ziel</th><th>Verweis</th></tr>
+							</thead>
+						<tbody>
+						<tr>
+							<td><a href="https://scotthelme.co.uk/blog1/">https://www.sunlime.at/blog1/</a></td><td><a href="http://www.sunlime.at/blog2/">http://www.sunlime.at/blog2/</a></td><td>						NULL</td></tr>
+						<tr><td><a href="https://www.sunlime.at/blog1/">https://www.sunlime.at/blog1/</a></td><td><a href="https://www.sunlime.at/blog2/">https://www.sunlime.at/blog2/</a></td><td						><a href="https://www.sunlime.at/blog1/">https://www.sunlime.at/blog1/</a></td></tr>
+						<tr><td><a href="http://www.sunlime.at/blog1/">http://www.sunlime.at/blog1/</a></td><td><a href="http://www.sunlime.at/blog2/">http://www.sunlime.at/blog2/</a></td><td><a 						href="http://www.sunlime.at/blog1/">http://www.sunlime.at/blog1/</a></td></tr>
+						<tr><td><a href="http://www.sunlime.at/blog1/">http://www.sunlime.at/blog1/</a></td><td><a href="http://example.com">http://example.com</a></td><td><a href="http://						www.sunlime.at/blog1/">http://www.sunlime.at/blog1/</a></td></tr>
+						<tr><td><a href="http://www.sunlime.at/blog1/">http://www.sunlime.at/blog1/</a></td><td><a href="https://example.com">https://example.com</a></td><td><a href="http://						www.sunlime.at/blog1/">http://www.sunlime.at/blog1/</a></td></tr>
+						<tr><td><a href="https://www.sunlime.at/blog1/">https://scotthelme.co.uk/blog1/</a></td><td><a href="http://example.com">http://example.com</a></td><td>NULL</td></tr>
+						</tbody>
+						</table>
+						<aside class="notes">Wenn die Website, die ein Besucher verlässt, auf HTTPS läuft und auf eine Website wechselt, die auf HTTP läuft, dann liefert der Browser keinen Seitenverweis aus und hilft dabei, sensitive Daten zu schützen (weil diese ja auf der HTTP Seite für jedermann sichtbar wären).
+						</aside>
+					</section>
+
+					<section data-transition="fade-in fade-out">
+						<h2> Vorteile von HTTPS im Überblick</h2>
+						<ul>
+							<li>Schneller als HTTP</li>
+							<li>Sicherer als HTTP</li>
+							<li>Besere SEO Rankings</li>
+							<li>Keine Browserwarnungen</li>
+							<li>Mehr Funktionen</li>
+							<li>Bessere Seitenverweisen</li>
+						</ul>
+						<aside class="notes">Wenn die Website, die ein Besucher verlässt, auf HTTPS läuft und auf eine Website wechselt, die auf HTTP läuft, dann liefert der Browser keinen Seitenverweis aus und hilft dabei, sensitive Daten zu schützen (weil diese ja auf der HTTP Seite für jedermann sichtbar wären).
+						</aside>
+					</section>
+
+				</section> <!-- End of 1st chapter HTTPS -->
+
+				<section>
+					<section data-background="#96b532">
+						<h1>Passwörter</h1>
+						<blockquote>Wichtiger als die Länge ist uns bei der Wahl unserer Passwörter, dass wir uns an sie erinnern können. Und genau das ist das Problem!</blockquote>
+						<aside class="notes">Während uns bewusst ist, dass Passwörter ein Sicherheitsrisiko darstellen, verwenden die Wenigsten  von uns 14 Zeichen starke Passwörter mit Sonderzeichen, Groß- und Kleinschreibung und Phrasen, die in keinem Wörterbuch stehen.</aside>
+					</section>
+
+					<section>
+						<h2>Die Komprimitierung von Passwörtern</h2>
+						<ul>
+							<li>Trügerische Sicherheit</li>
+						</ul>
+						<aside class="notes">Wir fühlen uns relativ sicher, weil wir glauben, dass Hacker auf eine Website gehen, den Benutzernamen eingeben und versuchen, dass Passwort durch Mehrfache Eingabe zu erraten. Wir fühlen uns deshalb so sicher, weil wir uns selbst schon so oft selbst aus unseren Konten ausgesperrt haben, weil wir das Passwort falsch eingegeben oder sogar vergessen hatten.</aside>
+					</section>
+
+					<section>
+						<h2>Die Komprimitierung von Passwörtern</h2>
+						<ul>
+							<li>Password lockouts: Eine trügerische Sicherheit</li>
+						</ul>
+						<aside class="notes">Wir fühlen uns relativ sicher, weil wir glauben, dass Hacker auf eine Website gehen, den Benutzernamen eingeben und versuchen, dass Passwort durch Mehrfache Eingabe zu erraten. Wir fühlen uns deshalb so sicher, weil wir uns selbst schon so oft selbst aus unseren Konten ausgesperrt haben, weil wir das Passwort falsch eingegeben oder sogar vergessen hatten. Wir glauben, dass es den Hackern gleich ergeht. Nach drei Versuchen werden sie, so wie wir, automatisch ausgesperrt - glauben wir - und wiegen uns in trügerischer Sicherheit.</aside>
+					</section>
+
+						<section>
+						<h2>Die Komprimitierung von Passwörtern</h2>
+						<ul>
+							<li>Password lockouts sind kein Schutz mehr</li>
+						</ul>
+						<aside class="notes">Lockouts und ähnliche Schutzmaßnahmen stellen mittlerweile Hacker vor keine großen Probleme mehr. Sie wissen den Benutzername und das Passwort bereits bevor sie auf die Anmeldeseite der Website kommen. Denn sie haben das Passwort bereits Stunden, Tage oder Monate vorher offline gehackt.</aside>
+					</section>
+
+					<section>
+						<h2>Die Komprimitierung von Passwörtern</h2>
+						<ul>
+							<li>Offline Angriffe sind ein Paradies für Hacker</li>
+						</ul>
+						<aside class="notes">Online Hacks sind schwierig, aber offline Angriffe sind ein Paradies für Hacker. Das einzige Limit ist die Qualalität von Software und Hardware, die ein Hacker verwendet. Geschickte Hacker können Milliarden von Versuchen pro Sekunde mit normalen Computern ausführen.</aside>
+					</section>
+
+
+					<section>
+						<h2>Die Komprimitierung von Passwörtern</h2>
+						<ul>
+							<li>Der typische offline Password Hack</li>
+						</ul>
+						<aside class="notes">Der typische offline Passwort Hack erfolgt über eine Datenbank, die der Hacker über einen Einbruch auf einem Server gestohlen hat. Dabei zielt der Angreifer nicht auf individuelle Kontoinhaber ab, sondern auf die Menge und versucht einige wenige Passwörter zu entschlüsseln und darüber Zugang auf viele Konten zu erhalten.</aside>
+					</section>
+
+					<section>
+						<h2>Die Komprimitierung von Passwörtern</h2>
+						<ul>
+							<li>Das Problem mit Hashes</li>
+						</ul>
+						<pre><code>echo "sunlime" | openssl sha1<br />
+						949c913bef2ef05a8ce3d5cb9886d075ca7680d0</code></pre>
+						<aside class="notes">Passwörter werden niemals als Reintext in Datenbanken gespeichert sondern werden über einen Prozess namens Hash verschlüsselt. Ein Hash ist ein Algorythmus, der eine Wort in eine nicht wieder erkennbare Zeichenkette mit einer bestimmten Länge verwandelt. Die Idee ist, dass man eine gehashte Verson des Passwortes bedenkenlos in einer Datenbank speichern kann. Außerdem gibt es keine kryptografische Möglichkeit, aus einer gehashten Zeichenkette das ursprüngliche Wort wiederherzustellen.</aside>
+					</section>
+					<section>
+						<h2>Die Komprimitierung von Passwörtern</h2>
+						<ul>
+							<li>Das Problem mit Hashes</li>
+						</ul>
+						<pre><code>echo "sunlime" | openssl sha1<br />
+						949c913bef2ef05a8ce3d5cb9886d075ca7680d0</code></pre>
+						<pre><code>echo "sunline" | openssl sha1<br />
+						88fc0d6348ed734268a4a92e8e30698cb0854fd1</code></pre>
+						<aside class="notes">Eine weitere Eigenschaft eines Hashes ist, dass eine kleinere Änderungen im Reintext eine große Änderung im gehashte String bedingt.<br />
+						Dadurch wird es unmöglich, sich an ein Passwort durch schrittweises Ausprobieren von Zeichen anzunähern. D.h. man kann aus dem Hash von "sunlime" niemals auf den Hash von "sunline" schließen.</aside>
+					</section>
+
+					<section>
+						<h2>Die Komprimitierung von Passwörtern</h2>
+						<ul>
+							<li>Wie gehen die Hacker vor?</li>
+						</ul>
+						<p>Hash Werte vergleichen</p>
+						<aside class="notes">Die komprimitierte Datenbank enthält die Benutzernamen in Reintext und die zugehörigen Passwörter als Hash Wert. Die Hacker wenden nun den in der Datenbank für die Verschlüsselung von Passwörtern verwendeten Hash Algorythmus auf ein beliebiges Passwort an. Dann vergleichen sie den Hash Wert dieses Passworts mit den in der Datenbank enthaltenen Hash Werten. Wenn sie in der Datenbank diesen Hash Wert finden, dann habne sie einen Treffer gelandet und der Benutzer hat ein Problem.
+
+Sie greifen also nicht individuelle Benutzer an sondern versuchen von den Millionen von Benutzern in der Datenbank Passwörter zu entschlüsseln. Das heißt, sie zielen auf die niedrig hängenden Früchte ab.</aside>
+					</section>
+
+										<section>
+						<h2>Die Komprimitierung von Passwörtern</h2>
+						<ul>
+							<li>Passwort Wörterbücher</li>
+						</ul>
+						<aside class="notes">Die komprimitierte Datenbank enthält die Benutzernamen in Reintext und die zugehörigen Passwörter als Hash Wert. Die Hacker wenden nun den in der Datenbank für die Verschlüsselung von Passwörtern verwendeten Hash Algorythmus auf ein beliebiges Passwort an. Dann vergleichen sie den Hash Wert dieses Passworts mit den in der Datenbank enthaltenen Hash Werten. Wenn sie in der Datenbank diesen Hash Wert finden, dann habne sie einen Treffer gelandet und der Benutzer hat ein Problem.
+
+Sie greifen also nicht individuelle Benutzer an sondern versuchen von den Millionen von Benutzern in der Datenbank Passwörter zu entschlüsseln. Das heißt, sie zielen auf die niedrig hängenden Früchte ab.</aside>
+					</section>
+				</section> <!-- End of 2nd chapter Passwörter
+
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Vertical Slides</h2>
+						<p>Slides can be nested inside of each other.</p>
+						<p>Use the <em>Space</em> key to navigate through all slides.</p>
+						<br>
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section>
+						<h2>Basement Level 1</h2>
+						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+					</section>
+					<section>
+						<h2>Basement Level 2</h2>
+						<p>That's it, time to go back up.</p>
+						<br>
+						<a href="#/2">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+				</section>
+
+				<section>
+					<h2>Slides</h2>
+					<p>
+						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
+					</p>
+				</section>
+
+				<section>
+					<h2>Point of View</h2>
+					<p>
+						Press <strong>ESC</strong> to enter the slide overview.
+					</p>
+					<p>
+						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
+					</p>
+				</section>
+
+				<section>
+					<h2>Touch Optimized</h2>
+					<p>
+						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
+					</p>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						## Markdown support
+
+						Write content using inline or external Markdown.
+						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+
+						```
+						<section data-markdown>
+						  ## Markdown support
+
+						  Write content using inline or external Markdown.
+						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+						</section>
+						```
+					</script>
+				</section>
+
+				<section>
+					<section id="fragments">
+						<h2>Fragments</h2>
+						<p>Hit the next arrow...</p>
+						<p class="fragment">... to step through ...</p>
+						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+
+						<aside class="notes">
+							This slide has fragments which are also stepped through in the notes window.
+						</aside>
+					</section>
+					<section>
+						<h2>Fragment Styles</h2>
+						<p>There's different types of fragments, like:</p>
+						<p class="fragment grow">grow</p>
+						<p class="fragment shrink">shrink</p>
+						<p class="fragment fade-out">fade-out</p>
+						<p class="fragment fade-up">fade-up (also down, left and right!)</p>
+						<p class="fragment current-visible">current-visible</p>
+						<p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p>
+					</section>
+				</section>
+
+				<section id="transitions">
+					<h2>Transition Styles</h2>
+					<p>
+						You can select from different transitions, like: <br>
+						<a href="?transition=none#/transitions">None</a> -
+						<a href="?transition=fade#/transitions">Fade</a> -
+						<a href="?transition=slide#/transitions">Slide</a> -
+						<a href="?transition=convex#/transitions">Convex</a> -
+						<a href="?transition=concave#/transitions">Concave</a> -
+						<a href="?transition=zoom#/transitions">Zoom</a>
+					</p>
+				</section>
+
+				<section id="themes">
+					<h2>Themes</h2>
+					<p>
+						reveal.js comes with a few themes built in: <br>
+						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/black.css'); return false;">Black (default)</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/white.css'); return false;">White</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/league.css'); return false;">League</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/sky.css'); return false;">Sky</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/beige.css'); return false;">Beige</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/simple.css'); return false;">Simple</a> <br>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/serif.css'); return false;">Serif</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/blood.css'); return false;">Blood</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/night.css'); return false;">Night</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/moon.css'); return false;">Moon</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/solarized.css'); return false;">Solarized</a>  -
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/sunlime.css'); return false;">Sunlime</a>
+					</p>
+				</section>
+
+				<section>
+					<section data-background="#dddddd">
+						<h2>Slide Backgrounds</h2>
+						<p>
+							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
+						</p>
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
+						<h2>Image Backgrounds</h2>
+						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
+					</section>
+					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
+						<h2>Tiled Backgrounds</h2>
+						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+					</section>
+					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
+						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+							<h2>Video Backgrounds</h2>
+							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+						</div>
+					</section>
+					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+						<h2>... and GIFs!</h2>
+					</section>
+				</section>
+
+				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+					<h2>Background Transitions</h2>
+					<p>
+						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
+					</p>
+					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
+				</section>
+
+				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+					<h2>Background Transitions</h2>
+					<p>
+						You can override background transitions per-slide.
+					</p>
+					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+				</section>
+
+				<section>
+					<h2>Pretty Code</h2>
+					<pre><code class="hljs" data-trim contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}
+					</code></pre>
+					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section>
+
+				<section>
+					<h2>Marvelous List</h2>
+					<ul>
+						<li>No order here</li>
+						<li>Or here</li>
+						<li>Or here</li>
+						<li>Or here</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Fantastic Ordered List</h2>
+					<ol>
+						<li>One is smaller than...</li>
+						<li>Two is smaller than...</li>
+						<li>Three!</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Tabular Tables</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Item</th>
+								<th>Value</th>
+								<th>Quantity</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Apples</td>
+								<td>$1</td>
+								<td>7</td>
+							</tr>
+							<tr>
+								<td>Lemonade</td>
+								<td>$2</td>
+								<td>18</td>
+							</tr>
+							<tr>
+								<td>Bread</td>
+								<td>$3</td>
+								<td>2</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section>
+					<h2>Clever Quotes</h2>
+					<p>
+						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
+					</p>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+					</blockquote>
+				</section>
+
+				<section>
+					<h2>Intergalactic Interconnections</h2>
+					<p>
+						You can link between slides internally,
+						<a href="#/2/3">like this</a>.
+					</p>
+				</section>
+
+				<section>
+					<h2>Speaker View</h2>
+					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
+					<p>Press the <em>S</em> key to try it out.</p>
+
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<section>
+					<h2>Export to PDF</h2>
+					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
+					<iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+				</section>
+
+				<section>
+					<h2>Global State</h2>
+					<p>
+						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+						will be added as a class to the document element when the slide is open. This lets you
+						apply broader style changes, like switching the page background.
+					</p>
+				</section>
+
+				<section data-state="customevent">
+					<h2>State Events</h2>
+					<p>
+						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+					</p>
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+Reveal.addEventListener( 'customevent', function() {
+	console.log( '"customevent" has fired' );
+} );
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Take a Moment</h2>
+					<p>
+						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
+					</p>
+				</section>
+
+				<section>
+					<h2>Much more</h2>
+					<ul>
+						<li>Right-to-left support</li>
+						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+					</ul>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+					<p>
+						- <a href="http://slides.com">Try the online editor</a> <br>
+						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../reveal.js/lib/js/head.min.js"></script>
+		<script src="../reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
