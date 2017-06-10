@@ -14,18 +14,18 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="../reveal.js/css/reveal.css">
-		<link rel="stylesheet" href="../reveal.js/css/theme/sunlime.css" id="theme">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sunlime.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
@@ -63,10 +63,8 @@
 				</section>
 
 				<section>
-					<h1>Christoph Potzinger</h2>
-					<h2>
-						Sunline Web Innovations GmbH
-					</h2>
+					<h1>Christoph Potzinger</h1>
+					<h2>Sunline Web Innovations GmbH</h2>
 					<p>
 						<small> <a href="https://www.sunlime.at">https://www.sunlime.at</a> / <a href="http://twitter.com/sunlimeit">@sunlimeit</a></small>
 				</section>
@@ -132,7 +130,9 @@
 						<ul>
 							<li>Mirai Botnet und das Internet der Dinge</li>
 						</ul>
-						<aside class="notes">Unter Mirai versteht man eine Linux-Schadsofware, mit deren Hilfe Bot-Netze aufgebaut werden können, um gezielte Attacken durch absichtliche Überlastungen von Netzen durch andere Systeme zu organisieren. Mirai nutzt die Tatsache aus, dass immer mehr Alltagsgegenstände wie Router, CCTV Überwachungssysteme, Digitale Video Recorder, Fernsehrer, DVD Player us mit dem Internet verbunden sind (Internet der Dinge). Die Software scannt das Netz nach Sicherheitslücken bei solchen Geräten (mit werkseitig aufgespielter Betriebssoftware) und versucht dann, Schadcode auf diese aufzuspielen.
+						<aside class="notes"><p>Unter Mirai versteht man eine Linux-Schadsofware. Damit können Bot-Netze (= Gruppe automatisierter Schadprogramme) aufgebaut werden. Mit diesen lassen sich gezielte Attacken durch absichtliche Überlastungen von Netzen ausführen.</p> 
+						<p>Mirai nutzt die Tatsache aus, dass immer mehr Alltagsgegenstände wie Router, CCTV Überwachungssysteme, Digitale Video Recorder, Fernsehrer, DVD Player us mit dem Internet verbunden sind (Internet der Dinge).</p> 
+						<p>Die Software scannt das Netz nach Sicherheitslücken vor allem bei Internet der Dinge Geräten und versucht dann, Schadcode auf diese aufzuspielen.</p>
 					</section>
 
 					<section>
@@ -140,23 +140,23 @@
 						<h3>Riesige DDOS Attacken</h3>
 						<ul>
 							<li class="inactive">Mirai Botnet und das Internet der Dinge</li>
-							<li><a href="https://servercomparator.com/vpn/blog/dyn-mirai-ddos-complete-story">21.10.2016: DYN mit Domino Effekt</a></li>
+							<li>21.10.2016: DYN mit Domino Effekt</li>
 						</ul>
-						<p class="fragment">Reddit offline</p>
 						<p class="fragment">Twitter offline</p>
 						<p class="fragment">Amazon offline</p>
 						<p class="fragment">Netflix offline</p>
 						<p class="fragment">Die größten Porno-Seiten: ONLINE ;)</p>
-					</section>
-					<aside class="notes"><p>Am 21. Oktober 2016 kam es unter Beteiligung des Bot-Netzes Mirai zu großangelegten DDoS-Angriffen auf die Firma Dyn. Viele große Webseiten, welche das DNS Service von Dyn nutzten, waren dadurch stundenlang nicht erreichbar. Die einzigen großen Websites, die nicht davon betroffen waren, waren jene der Pornoindustrie – weil deren Webserver auf einen alternativen Anbieter umschalteten als Dyn nicht mehr erreichbar war.</p>
-					<p>DNS = Domain Name System; verantwortlich für die Übersetzung von lesbaren Website Namen/Domains wie zB www.sunlime.at in eine numberische, maschinenlesbare Internet Adresse. Jedes mal wenn man ein E-Mail versendet oder eine Website aufruft, sendet der Computer einen DNS Look-up request an den Internet Service Provider, um den Datenverkehr an die richtige Adresse zu routen.</p> </aside>
+						<aside class="notes"><p>Am 21. Oktober 2016 kam es unter Beteiligung des Bot-Netzes Mirai zu großangelegten DDoS-Angriffen auf die Firma Dyn. Viele große Webseiten, 	welche das DNS Service von Dyn nutzten, waren dadurch stundenlang nicht erreichbar.</p><p>Die einzigen großen Websites, die nicht davon betroffen waren, waren jene der 	Pornoindustrie – weil deren Webserver auf einen alternativen Anbieter umschalteten als Dyn nicht mehr erreichbar war.</p>
+						<p>DNS = Domain Name System; verantwortlich für die Übersetzung von lesbaren Website Namen/Domains wie zB www.sunlime.at in eine numberische, maschinenlesbare Internet 	Adresse. Jedes mal wenn man ein E-Mail versendet oder eine Website aufruft, sendet der Computer einen DNS Look-up request an den Internet Service Provider, um den 	Datenverkehr an die richtige Adresse zu routen.</p> </aside>
+						</section>
+
 					<section>
 						<h2>Enormer Anstieg von Angriffen</h2>
 						<h3>Riesige DDOS Attacken</h3>
 						<ul>
 							<li class="inactive">Mirai Botnet und das Internet der Dinge</li>
-							<li class="inactive"><a href="https://servercomparator.com/vpn/blog/dyn-mirai-ddos-complete-story">DYN</a></li>
-							<li><a href="http://www.telegraph.co.uk/technology/2016/11/04/unprecedented-cyber-attack-takes-liberias-entire-internet-down/">Liberia</a></li>
+							<li class="inactive">21.10.2016: DYN mit Domino Effekt</li>
+							<li>Liberia offline</li>
 							<aside class="notes">Anfang November legte eine DDOS Attacke das gesamte Internet Liberias zeitweise lahm. Dieser Angriff gilt als versuchter Testlauf zur Bestimmung der Leistungsfähigkeit eines auf Mirai gestützten Bot-Netzes.
 						</ul>
 					</section>
@@ -166,8 +166,8 @@
 						<h3>Riesige DDOS Attacken</h3>
 						<ul>
 							<li class="inactive">Mirai Botnet und das Internet der Dinge</li>
-							<li class="inactive"><a href="https://servercomparator.com/vpn/blog/dyn-mirai-ddos-complete-story">DYN</a></li>
-							<li class="inactive"><a href="http://www.telegraph.co.uk/technology/2016/11/04/unprecedented-cyber-attack-takes-liberias-entire-internet-down/">Liberia</a></li>
+							<li class="inactive">21.10.2016: DYN mit Domino Effekt</li>
+							<li class="inactive">Liberia offline</li>
 							<li>Deutsche Telekom</li>
 						</ul>
 						<aside class="notes">Der Hackerangriff auf DSL-Router der Deutschen Telekom am 27. November 2016 erfolgte ebenfalls über Mirai.</aside>
@@ -178,8 +178,8 @@
 						<h3>Riesige DDOS Attacken</h3>
 						<ul>
 							<li class="inactive">Mirai Botnet und das Internet der Dinge</li>
-							<li class="inactive"><a href="https://servercomparator.com/vpn/blog/dyn-mirai-ddos-complete-story">DYN</a></li>
-							<li class="inactive"><a href="http://www.telegraph.co.uk/technology/2016/11/04/unprecedented-cyber-attack-takes-liberias-entire-internet-down/">Liberia</a></li>
+							<li class="inactive">21.10.2016: DYN mit Domino Effekt</li>
+							<li class="inactive">Liberia offline</li>
 							<li class="inactive">Deutsche Telekom</li>
 							<li>Beeinflussung von Wahlen</li>
 						</ul>
@@ -191,8 +191,8 @@
 						<h3>Riesige DDOS Attacken</h3>
 						<ul>
 							<li class="inactive">Mirai Botnet und das Internet der Dinge</li>
-							<li class="inactive"><a href="https://servercomparator.com/vpn/blog/dyn-mirai-ddos-complete-story">DYN</a></li>
-							<li class="inactive"><a href="http://www.telegraph.co.uk/technology/2016/11/04/unprecedented-cyber-attack-takes-liberias-entire-internet-down/">Liberia</a></li>
+							<li class="inactive">21.10.2016: DYN mit Domino Effekt</li>
+							<li class="inactive">Liberia offline</li>
 							<li class="inactive">Deutsche Telekom</li>
 							<li class="inactive">Beeinflussung von Wahlen
 							<li>Oft nur 1 Angreifer</li>	
@@ -284,6 +284,7 @@
 						<ul>
 							<li>Sicherer als HTTP
 							<ul>
+								<li class="inactive">1. Unterbindet Inhaltseinschleusungen von Dritten</li>
 								<li>2. Unterbindet Malware Einschleusung</li>
 							</ul>
 							</li>
@@ -360,19 +361,26 @@
 
 				</section> <!-- End of 1st chapter HTTPS -->
 
+				<section data-transition="fade-in fade-out" data-background="#2fa63e">
+				<h2>Tipp für alle Websitebesitzer unter Ihnen</h2>
+				<blockquote class="fragment">Sorgen Sie dafür, dass das Redaktionssystem und alle verwendeten Plugins und Module regelmäßig aktualisiert werden!</blockquote>
+				<p class="fragment">Nur eine kleine Investition, die enormen Schaden verhindern kann!</p>
+				<p class="fragment">Oder Sie machen es selbst!</p>
+				</section>
+
 				<section>
 					<section data-background="#96b532">
 						<h1>Passwörter</h1>
-						<blockquote>Wichtiger als die Länge ist uns bei der Wahl unserer Passwörter, dass wir uns an sie erinnern können. Und genau das ist das Problem!</blockquote>
+						<blockquote>Wichtiger als die Länge ist uns, dass wir uns an unsere Passwörter erinnern können. Und genau das ist das Problem!</blockquote>
 						<aside class="notes">Während uns bewusst ist, dass Passwörter ein Sicherheitsrisiko darstellen, verwenden die Wenigsten  von uns 14 Zeichen starke Passwörter mit Sonderzeichen, Groß- und Kleinschreibung und Phrasen, die in keinem Wörterbuch stehen.</aside>
 					</section>
 
 					<section>
 						<h2>Die Komprimitierung von Passwörtern</h2>
 						<ul>
-							<li>Trügerische Sicherheit</li>
+							<li>Password lockouts: Trügerische Sicherheit</li>
 						</ul>
-						<aside class="notes">Wir fühlen uns relativ sicher, weil wir glauben, dass Hacker auf eine Website gehen, den Benutzernamen eingeben und versuchen, dass Passwort durch Mehrfache Eingabe zu erraten. Wir fühlen uns deshalb so sicher, weil wir uns selbst schon so oft selbst aus unseren Konten ausgesperrt haben, weil wir das Passwort falsch eingegeben oder sogar vergessen hatten.</aside>
+						<aside class="notes"><p>Wir fühlen uns relativ sicher, weil wir glauben, dass Hacker auf eine Website gehen, den Benutzernamen eingeben und versuchen, dass Passwort durch mehrfache Eingabe zu erraten.</p><p> Wir fühlen uns deshalb so sicher, weil wir uns selbst schon so oft selbst aus unseren Konten ausgesperrt haben, weil wir das Passwort falsch eingegeben oder sogar vergessen hatten.</p></aside>
 					</section>
 
 					<section>
@@ -380,15 +388,15 @@
 						<ul>
 							<li>Password lockouts: Eine trügerische Sicherheit</li>
 						</ul>
-						<aside class="notes">Wir fühlen uns relativ sicher, weil wir glauben, dass Hacker auf eine Website gehen, den Benutzernamen eingeben und versuchen, dass Passwort durch Mehrfache Eingabe zu erraten. Wir fühlen uns deshalb so sicher, weil wir uns selbst schon so oft selbst aus unseren Konten ausgesperrt haben, weil wir das Passwort falsch eingegeben oder sogar vergessen hatten. Wir glauben, dass es den Hackern gleich ergeht. Nach drei Versuchen werden sie, so wie wir, automatisch ausgesperrt - glauben wir - und wiegen uns in trügerischer Sicherheit.</aside>
+						<aside class="notes">Wir glauben, dass es den Hackern gleich ergeht. Nach drei Versuchen werden sie, so wie wir, automatisch ausgesperrt - glauben wir - und wiegen uns in trügerischer Sicherheit.</aside>
 					</section>
 
-						<section>
+					<section>
 						<h2>Die Komprimitierung von Passwörtern</h2>
 						<ul>
 							<li>Password lockouts sind kein Schutz mehr</li>
 						</ul>
-						<aside class="notes">Lockouts und ähnliche Schutzmaßnahmen stellen mittlerweile Hacker vor keine großen Probleme mehr. Sie wissen den Benutzername und das Passwort bereits bevor sie auf die Anmeldeseite der Website kommen. Denn sie haben das Passwort bereits Stunden, Tage oder Monate vorher offline gehackt.</aside>
+						<aside class="notes">Lockouts nach 3 oder 5-maligen Fehlversuchen und ähnliche Schutzmaßnahmen stellen mittlerweile Hacker vor keine großen Probleme mehr. Sie wissen den Benutzername und das Passwort bereits bevor sie auf die Anmeldeseite der Website kommen. Denn sie haben das Passwort bereits Stunden, Tage oder Monate vorher offline gehackt.</aside>
 					</section>
 
 					<section>
@@ -396,7 +404,7 @@
 						<ul>
 							<li>Offline Angriffe sind ein Paradies für Hacker</li>
 						</ul>
-						<aside class="notes">Online Hacks sind schwierig, aber offline Angriffe sind ein Paradies für Hacker. Das einzige Limit ist die Qualalität von Software und Hardware, die ein Hacker verwendet. Geschickte Hacker können Milliarden von Versuchen pro Sekunde mit normalen Computern ausführen.</aside>
+						<aside class="notes">Online Hacks sind schwierig, aber offline Angriffe sind ein Paradies für Hacker. Das einzige Limit ist die Qualität von Software und Hardware, die ein Hacker verwendet. Geschickte Hacker können Milliarden von Versuchen pro Sekunde mit normalen Computern ausführen.</aside>
 					</section>
 
 
@@ -405,381 +413,228 @@
 						<ul>
 							<li>Der typische offline Password Hack</li>
 						</ul>
+						<p>über gestohlene Datenbanken</p>
 						<aside class="notes">Der typische offline Passwort Hack erfolgt über eine Datenbank, die der Hacker über einen Einbruch auf einem Server gestohlen hat. Dabei zielt der Angreifer nicht auf individuelle Kontoinhaber ab, sondern auf die Menge und versucht einige wenige Passwörter zu entschlüsseln und darüber Zugang auf viele Konten zu erhalten.</aside>
 					</section>
 
 					<section>
 						<h2>Die Komprimitierung von Passwörtern</h2>
-						<ul>
-							<li>Das Problem mit Hashes</li>
-						</ul>
-						<pre><code>echo "sunlime" | openssl sha1<br />
-						949c913bef2ef05a8ce3d5cb9886d075ca7680d0</code></pre>
-						<aside class="notes">Passwörter werden niemals als Reintext in Datenbanken gespeichert sondern werden über einen Prozess namens Hash verschlüsselt. Ein Hash ist ein Algorythmus, der eine Wort in eine nicht wieder erkennbare Zeichenkette mit einer bestimmten Länge verwandelt. Die Idee ist, dass man eine gehashte Verson des Passwortes bedenkenlos in einer Datenbank speichern kann. Außerdem gibt es keine kryptografische Möglichkeit, aus einer gehashten Zeichenkette das ursprüngliche Wort wiederherzustellen.</aside>
+						<h3>Hashfunktionen und Passwörter</h3>
+						<pre><code>echo "sunlime" | openssl sha1
+949c913bef2ef05a8ce3d5cb9886d075ca7680d0</code></pre>
+						<p> sunlime => 949c913bef2ef05a8ce3d5cb9886d075ca7680d0</p>
+						<aside class="notes"><p>Passwörter werden niemals als Reintext in Datenbanken gespeichert sondern werden über eine kryptographische Hashfunktion verschlüsselt.</p> <p>Ein Hash ist ein Algorythmus, der eine Wort in eine nicht wieder erkennbare Zeichenkette mit einer bestimmten Länge verwandelt.</p><p> Die Idee ist, dass man eine gehashte Verson des Passwortes bedenkenlos in einer Datenbank speichern kann. Außerdem gibt es keine kryptografische Möglichkeit, aus einer gehashten Zeichenkette das ursprüngliche Wort wiederherzustellen.</p></aside>
 					</section>
+
 					<section>
 						<h2>Die Komprimitierung von Passwörtern</h2>
-						<ul>
-							<li>Das Problem mit Hashes</li>
-						</ul>
-						<pre><code>echo "sunlime" | openssl sha1<br />
-						949c913bef2ef05a8ce3d5cb9886d075ca7680d0</code></pre>
-						<pre><code>echo "sunline" | openssl sha1<br />
-						88fc0d6348ed734268a4a92e8e30698cb0854fd1</code></pre>
+						<h3>Hashfunktionen und Passwörter</h3>
+						<pre><code>echo "sunlime" | openssl sha1
+949c913bef2ef05a8ce3d5cb9886d075ca7680d0</code></pre>
+						<pre><code>echo "sunline" | openssl sha1
+88fc0d6348ed734268a4a92e8e30698cb0854fd1</code></pre>
+						<p> sunlime => 949c913bef2ef05a8ce3d5cb9886d075ca7680d0</p>
+						<p> sunli<strong>n</strong>e => 88fc0d6348ed734268a4a92e8e30698cb0854fd1</p>
 						<aside class="notes">Eine weitere Eigenschaft eines Hashes ist, dass eine kleinere Änderungen im Reintext eine große Änderung im gehashte String bedingt.<br />
 						Dadurch wird es unmöglich, sich an ein Passwort durch schrittweises Ausprobieren von Zeichen anzunähern. D.h. man kann aus dem Hash von "sunlime" niemals auf den Hash von "sunline" schließen.</aside>
 					</section>
 
 					<section>
 						<h2>Die Komprimitierung von Passwörtern</h2>
-						<ul>
-							<li>Wie gehen die Hacker vor?</li>
-						</ul>
-						<p>Hash Werte vergleichen</p>
-						<aside class="notes">Die komprimitierte Datenbank enthält die Benutzernamen in Reintext und die zugehörigen Passwörter als Hash Wert. Die Hacker wenden nun den in der Datenbank für die Verschlüsselung von Passwörtern verwendeten Hash Algorythmus auf ein beliebiges Passwort an. Dann vergleichen sie den Hash Wert dieses Passworts mit den in der Datenbank enthaltenen Hash Werten. Wenn sie in der Datenbank diesen Hash Wert finden, dann habne sie einen Treffer gelandet und der Benutzer hat ein Problem.
-
-Sie greifen also nicht individuelle Benutzer an sondern versuchen von den Millionen von Benutzern in der Datenbank Passwörter zu entschlüsseln. Das heißt, sie zielen auf die niedrig hängenden Früchte ab.</aside>
+						<h3>Wie gehen Hacker vor?</h3>
+						<p>Sie vergleichen Hash Werte in gestohlenen Datenbanken.</p>
+						<aside class="notes"><p>Die komprimitierte Datenbank enthält die Benutzernamen in Reintext und die zugehörigen Passwörter als Hash Wert. Die Hacker wenden nun den in der Datenbank für die Verschlüsselung von Passwörtern verwendeten Hash Algorythmus auf ein beliebiges Passwort an.</p><p> Dann vergleichen sie den Hash Wert dieses Passworts mit den in der Datenbank enthaltenen Hash Werten. Wenn sie in der Datenbank diesen Hash Wert finden, dann haben sie einen Treffer gelandet und der Benutzer hat ein Problem.</p><p>Sie greifen also nicht individuelle Benutzer an sondern versuchen von den Millionen von Benutzern in der Datenbank Passwörter zu entschlüsseln. Das heißt, sie zielen auf die niedrig hängenden Früchte ab.</p></aside>
 					</section>
 
-										<section>
+					<section>
 						<h2>Die Komprimitierung von Passwörtern</h2>
-						<ul>
-							<li>Passwort Wörterbücher</li>
-						</ul>
-						<aside class="notes">Die komprimitierte Datenbank enthält die Benutzernamen in Reintext und die zugehörigen Passwörter als Hash Wert. Die Hacker wenden nun den in der Datenbank für die Verschlüsselung von Passwörtern verwendeten Hash Algorythmus auf ein beliebiges Passwort an. Dann vergleichen sie den Hash Wert dieses Passworts mit den in der Datenbank enthaltenen Hash Werten. Wenn sie in der Datenbank diesen Hash Wert finden, dann habne sie einen Treffer gelandet und der Benutzer hat ein Problem.
+						<h3>Passwort Wörterbücher</h3>
 
-Sie greifen also nicht individuelle Benutzer an sondern versuchen von den Millionen von Benutzern in der Datenbank Passwörter zu entschlüsseln. Das heißt, sie zielen auf die niedrig hängenden Früchte ab.</aside>
+						<aside class="notes">Um den Prozess weiter zu beschleunigen, setzen Hacker Wörterbücher ein. Sie wissen, dass wir eher Passwörter wählen, an die wir uns erinnern können.</aside>
 					</section>
-				</section> <!-- End of 2nd chapter Passwörter
 
-
-				<!-- Example of nested vertical slides -->
-				<section>
 					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+						<h2>Die Komprimitierung von Passwörtern</h2>
+						<h3>Hochentwickelte Hackingtechniken und neue Wörterbücher</h3>
+						<aside class="notes">Fortgeschrittene Hacker studieren wie Menschen Passwörter auswählen und erstellen daraus neue Wörterbücher, die noch effektiver sind als normale Wörterbücher.</aside>
 					</section>
+
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+						<h2>Die Komprimitierung von Passwörtern</h2>
+						<h3>Gestohlene Datenbanken</h3>
+						<p class="fragment">Juni 2012: 6,4 Mio LinkedIn Passwörter</p>
+						<p class="fragment">Dezember 2009: 32 Millionen RockYou.com Passwörter</p>
+						<aside class="notes">Der Einbruch in RockYou eröffnete den Hackern einen Blick in die Art und Weise, wie Menschen Passwörter wählen.</aside>
 					</section>
+
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
+						<h2>Die Komprimitierung von Passwörtern</h2>
+						<h3>RockYou Passwörter</h3>
+						<p class="fragment">"12345" od "123456" bei jedem 100. Benutzer</p>
+						<p class="fragment">Weniger als 6 Stellen bei jedem 3. Benutzer</p>
+						<p class="fragment">Namen, umgangssprachliche Ausdrücke und normale Wörter bei 50 % der Benutzern</p>
+						<aside class="notes">Der Einbruch in RockYou eröffnete den Hackern einen Blick in die Art und Weise, wie Menschen Passwörter wählen.</aside>
 					</section>
-				</section>
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
 					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment fade-up">fade-up (also down, left and right!)</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p>
-					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/solarized.css'); return false;">Solarized</a>  -
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/sunlime.css'); return false;">Sunlime</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
+						<h2>Die Komprimitierung von Passwörtern</h2>
+						<h3>RockYou Passwörter</h3>
+						<table>
 						<thead>
 							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
+								<th>Passwort</th><th>Anzahl der User</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
+								<td>123456</td><td class="align-right">290.731</td>
 							</tr>
 							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
+								<td>12345</td><td class="align-right">79.078</td>
 							</tr>
 							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
+								<td>123456789</td><td class="align-right">76.790</td>
+							</tr>
+							<tr>
+								<td>Password</td><td class="align-right">61.958</td>
+							</tr>
+							<tr>
+								<td>iloveyou</td><td class="align-right">51.622</td>
+							</tr>
+							<tr>
+								<td>princess</td><td class="align-right">35.231</td>
+							</tr>
+							<tr>
+								<td>rockyou</td><td class="align-right">22.588</td>
+							</tr>
+							<tr>
+								<td>michael</td><td class="align-right">14.898</td>
 							</tr>
 						</tbody>
-					</table>
-				</section>
+						</table>
+						<aside class="notes"></aside>
+					</section>
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+					<section>
+						<h2>Passwörter stärken</h2>
+						<p class="fragment">1. Anzahl der Zeichensätze: alpha-numerisch, groß/klein, Symbole</p>
+						<p class="fragment">2. Anzahl der Zeichen</p>
+						<aside class="notes"></aside>
+					</section>
 
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
+					<section>
+						<h2>Passwörter stärken</h2>
+						<p>Auswirkung von der Erhöhung von Zeichensätzen bei vierstelligen Passwörtern</p>
+						<table>
+						<thead>
+							<tr>
+								<th>Zeichensatz</th><th>Formel</th><th>Kombinationen</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="fragment">
+								<td>Zahlen (0-9)</td><td>10^4</td><td class="align-right">10.000</td>
+							</tr>
+							<tr class="fragment">
+								<td>kleinbuchstaben</td><td>26^4</td><td class="align-right">456.976</td>
+							</tr>
+							<tr class="fragment">
+								<td>Klein- und Großbuchstaben</td><td>52^4</td><td class="align-right">7.311.616</td>
+							</tr>
+							<tr class="fragment">
+								<td>Klein- und Großbuchstaben, Zahlen, und Symbole</td><td>95^4</td><td class="align-right">81.450.625</td>
+							</tr>
+						</tbody>
+						</table>
+						<aside class="notes">Mit Vergrößerung der Zeichensätze steigt die Stärke des Passwortes.</aside>
+					</section>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
+					<section>
+						<h2>Passwörter stärken</h2>
+						<p>Exponentielle Steigerung der Stärke mit jedem zusätzlichen Zeichen</p>
+						<small>Klein-/Großbuchstaben und Zahlen</small>
+						<table>
+						<thead>
+							<tr>
+								<th>Passwort Länge</th><th>Formel</th><th>Kombinationen</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="fragment">
+								<td>4 Zeichen</td><td>62^4</td><td class="align-right">14.776.336</td>
+							</tr>
+							<tr class="fragment">
+								<td>5 Zeichen</td><td>62^5</td><td class="align-right">916.130.000</td>
+							</tr>
+							<tr class="fragment">
+								<td>6 Zeichen</td><td>62^6</td><td class="align-right">56.800.000.000</td>
+							</tr>
+							<tr class="fragment">
+								<td>7 Zeichen</td><td>62^7</td><td class="align-right">218.340.110.000.000</td>
+							</tr>
+						</tbody>
+						</table>
+						<aside class="notes">Die Anzahl der Zeichen ist ebenfalls wichtig für die Stärke. Mit jedem zusätzlichen Zeichen steigt die Stärke exponentiell</aside>
+					</section>
 
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
+					<section>
+						<h2>Schlechte Passwörter</h2>
+						<p class="fragment">GottfrieD</p>
+						<p class="fragment">Gottfried1966</p>
+						<p class="fragment">G0ttfr1ed!</p>
+						<p class="fragment">Gottfried@Facebook</p>
+						<p class="fragment">Gottfried&Sandra</p>
+						<p class="fragment">asdfghj</p>
+					</section>
 
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
+					<section>
+						<h2>Keine gute Idee</h2>
+						<p class="fragment">Passwörter auf Papier festhalten</p>
+						<p class="fragment">Passwörter wieder verwenden</p>
+						<p class="fragment">Passwörter im Browser speichern!</p>
+						<p class="fragment">Passwörter über lange Perioden unverändert lassen</p>
+						<p class="fragment">Passwörter über E-Mail versenden</p>
+					</section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
+					<section>
+						<h2>Tipps für die Wahl von Passwörtern</h2>
+						<p class="fragment">Möglichst viele Zeichensätze verwenden</p>
+						<p class="fragment">Möglichst lange Passwörter verwenden</p>
+						<p class="fragment">Beliebige Zeichenketten sind besser</p>
+						<p class="fragment">Phrasen verwenden: remove-sovkhozy-footpath-glut-boiler-janitor-shipping</p>
+						<p class="fragment">Unterschiedliche Passwörter verwenden</p>
+						<p class="fragment"><strong>Passwort Manager zulegen</strong></p>
+					</section>
 
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
+					<section>
+						<h2>Tipps für das Passwort Management</h2>
+						<p class="fragment">Passwort Autocomplete Funktion im Webbrowser deaktivieren</p>
+						<p class="fragment">Passwörter oft ändern<sup>*</sup></p>
+						<p class="fragment">Browser Cache auf öffentlichen PC löschen</p>
+						<p class="fragment">Ändern des Passwortes wenn es über ein öffentliches WLAN verwendet wurde</p>
+						<p class="fragment"><strong><sup>*</sup>Bei Passwort Manager nicht nötig => zulegen!</strong></p>
+						<aside class="notes">Ändern des Passwortes wenn es über ein öffentliches WLAN verwendet wurde - vor allem bei HTTP Websites</aside>
+					</section>
+
+					<section>
+						<h2>Passwort Manager</h2>
+						<p class="fragment">LastPass (Windows)</p>
+						<p class="fragment">1Password (Mac)</p>
+						<p class="fragment">KeePass (Windows</p>
+						<p class="fragment">Dashlane.com</p>
+					</section>
+
+				</section> <!-- End of 2nd chapter Passwörter -->
 
 			</div>
 
 		</div>
 
-		<script src="../reveal.js/lib/js/head.min.js"></script>
-		<script src="../reveal.js/js/reveal.js"></script>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
 
 		<script>
 
@@ -794,12 +649,12 @@ Reveal.addEventListener( 'customevent', function() {
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
-					{ src: '../reveal.js/plugin/notes/notes.js', async: true }
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
 
