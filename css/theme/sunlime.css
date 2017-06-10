@@ -317,6 +317,9 @@ table thead {
 table tr td {
   font-size: 0.5em !important; }
 
+.align-right {
+  text-align: right !important; }
+
 .reveal h1,
 .reveal h2,
 .reveal h3,
