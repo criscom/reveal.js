@@ -14,18 +14,18 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/sunlime.css" id="theme">
+		<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../reveal.js/css/theme/sunlime.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
@@ -54,7 +54,7 @@
 				</section>
 
 				<section data-background="#96b532">
-					<h1>Web Security</h1>
+					<h1>Sicherheit im Netz</h1>
 					<h3>Eine Präsentation für den Rotary Club Leibnitz</h3>
 					<h4>Gasthof Rupp, 12.06.2017, 20:00 Uhr</h4>
 					<p>
@@ -75,7 +75,7 @@
 					<h1>Überblick</h1>
 					<ul>
 						<li class="fragment">Wie sicher ist das Web?</li>
-						<li class="fragment">Wie kann ich mich schützen?
+						<li class="fragment">Was kann man tun?
 						<ul>
 							<li class="fragment">HTTPS</li>
 							<li class="fragment">Passwörter</li>
@@ -114,35 +114,102 @@
 							<li class="fragment">SQL Einschleusung Angriff (SQL Injecion)</li>
 							<li class="fragment">Cross-Site Scripting (XSS)</li>
 							<li class="fragment">Session Hijacking und Man-in-the-Middle Attacks</li>
-							<li class="fragment">Credential Reuse</li>
+							<li class="fragment">Wiederverwendung von Passwörtern</li>
 							<li class="fragment">Denial of Service</li>
-							<aside class="notes">Malware: Antivirus Warnung im Browser, bösartiger E-Mail Anhang installiert Viren oder Ransomware am Computer<br />
-							XSS: Malware läuft nur im Browser des Besuchers und greift den Besucher direkt an</aside>
+						</ul>
+							<aside class="notes"><ul><li><strong>Malware:</strong> Antivirus Warnung im Browser, bösartiger E-Mail Anhang installiert Viren oder Ransomware am Computer</li>
+							<li><strong>Phishing:</strong> E-Mails mit Attachments oder Links. Ein Klick auf das Attachment installiert Malware auf dem Computer oder verschlüsselt die Daten am Computer</li>
+							<li><strong>SQL Injection</strong>: Über eine SQL Verwundbarkeit wird bösartiger Code in die Datenbank eingeschleust. Das kann zB über ein Suchformular erfolgen, in das der bösartige Code eingegeben und der SQL Server gezwungen wird, vertrauliche Daten auszugeben</li>
+							<li><strong>XSS:</strong> Malware läuft nur im Browser des Besuchers und greift den Besucher direkt an, zB durch die Eingabe von bösartigem Code in einen Kommentar</li>
+							<li><strong>Session Hijacking</strong>: Wenn zwei Computer über das Internet miteinander kommunizieren, wird eine Session eröffnet, die eine einzigartige ID bekommt. Diese ID sollte vertraulich gehalten werden, da über diese ID sicher gestellt wird, dass man mit dem "richtigen" Adressat kommuniziert. In einer Man-in-the-Middle Attacke wird diese Session ID sozusagen entführt bzw gestohlen. Der Angreifer gibt sich nun als der entfernte Server aus und versucht so zu vertraulichen Informationen zu kommen.</li></ul>
+
+							</aside>
+					</section>
+
+					<section>
+						<h2>Enormer Anstieg von Angriffen</h2>
+						<h3>Riesige DDOS Attacken</h3>
+						<ul>
+							<li>Mirai Botnet und das Internet der Dinge</li>
+						</ul>
+						<aside class="notes">Unter Mirai versteht man eine Linux-Schadsofware, mit deren Hilfe Bot-Netze aufgebaut werden können, um gezielte Attacken durch absichtliche Überlastungen von Netzen durch andere Systeme zu organisieren. Mirai nutzt die Tatsache aus, dass immer mehr Alltagsgegenstände wie Router, CCTV Überwachungssysteme, Digitale Video Recorder, Fernsehrer, DVD Player us mit dem Internet verbunden sind (Internet der Dinge). Die Software scannt das Netz nach Sicherheitslücken bei solchen Geräten (mit werkseitig aufgespielter Betriebssoftware) und versucht dann, Schadcode auf diese aufzuspielen.
+					</section>
+
+					<section>
+						<h2>Enormer Anstieg von Angriffen</h2>
+						<h3>Riesige DDOS Attacken</h3>
+						<ul>
+							<li class="inactive">Mirai Botnet und das Internet der Dinge</li>
+							<li><a href="https://servercomparator.com/vpn/blog/dyn-mirai-ddos-complete-story">21.10.2016: DYN mit Domino Effekt</a></li>
+						</ul>
+						<p class="fragment">Reddit offline</p>
+						<p class="fragment">Twitter offline</p>
+						<p class="fragment">Amazon offline</p>
+						<p class="fragment">Netflix offline</p>
+						<p class="fragment">Die größten Porno-Seiten: ONLINE ;)</p>
+					</section>
+					<aside class="notes"><p>Am 21. Oktober 2016 kam es unter Beteiligung des Bot-Netzes Mirai zu großangelegten DDoS-Angriffen auf die Firma Dyn. Viele große Webseiten, welche das DNS Service von Dyn nutzten, waren dadurch stundenlang nicht erreichbar. Die einzigen großen Websites, die nicht davon betroffen waren, waren jene der Pornoindustrie – weil deren Webserver auf einen alternativen Anbieter umschalteten als Dyn nicht mehr erreichbar war.</p>
+					<p>DNS = Domain Name System; verantwortlich für die Übersetzung von lesbaren Website Namen/Domains wie zB www.sunlime.at in eine numberische, maschinenlesbare Internet Adresse. Jedes mal wenn man ein E-Mail versendet oder eine Website aufruft, sendet der Computer einen DNS Look-up request an den Internet Service Provider, um den Datenverkehr an die richtige Adresse zu routen.</p> </aside>
+					<section>
+						<h2>Enormer Anstieg von Angriffen</h2>
+						<h3>Riesige DDOS Attacken</h3>
+						<ul>
+							<li class="inactive">Mirai Botnet und das Internet der Dinge</li>
+							<li class="inactive"><a href="https://servercomparator.com/vpn/blog/dyn-mirai-ddos-complete-story">DYN</a></li>
+							<li><a href="http://www.telegraph.co.uk/technology/2016/11/04/unprecedented-cyber-attack-takes-liberias-entire-internet-down/">Liberia</a></li>
+							<aside class="notes">Anfang November legte eine DDOS Attacke das gesamte Internet Liberias zeitweise lahm. Dieser Angriff gilt als versuchter Testlauf zur Bestimmung der Leistungsfähigkeit eines auf Mirai gestützten Bot-Netzes.
 						</ul>
 					</section>
 
 					<section>
 						<h2>Enormer Anstieg von Angriffen</h2>
-						<h3 class="fragment">Riesige DDOS Attacken</h3>
+						<h3>Riesige DDOS Attacken</h3>
 						<ul>
-							<li class="fragment"><a href="https://servercomparator.com/vpn/blog/dyn-mirai-ddos-complete-story">DYN</a></li>
-							<li class="fragment"><a href="http://www.telegraph.co.uk/technology/2016/11/04/unprecedented-cyber-attack-takes-liberias-entire-internet-down/">Liberia</a></li>
-							<li class="fragment">Mirai Botnet and IoT</li>
-							<li class="fragment">Oft nur 1 Angreifer</li>
-							<li class="fragment">Beeinflussung von Wahlen</li>
+							<li class="inactive">Mirai Botnet und das Internet der Dinge</li>
+							<li class="inactive"><a href="https://servercomparator.com/vpn/blog/dyn-mirai-ddos-complete-story">DYN</a></li>
+							<li class="inactive"><a href="http://www.telegraph.co.uk/technology/2016/11/04/unprecedented-cyber-attack-takes-liberias-entire-internet-down/">Liberia</a></li>
+							<li>Deutsche Telekom</li>
+						</ul>
+						<aside class="notes">Der Hackerangriff auf DSL-Router der Deutschen Telekom am 27. November 2016 erfolgte ebenfalls über Mirai.</aside>
+					</section>
+
+					<section>
+						<h2>Enormer Anstieg von Angriffen</h2>
+						<h3>Riesige DDOS Attacken</h3>
+						<ul>
+							<li class="inactive">Mirai Botnet und das Internet der Dinge</li>
+							<li class="inactive"><a href="https://servercomparator.com/vpn/blog/dyn-mirai-ddos-complete-story">DYN</a></li>
+							<li class="inactive"><a href="http://www.telegraph.co.uk/technology/2016/11/04/unprecedented-cyber-attack-takes-liberias-entire-internet-down/">Liberia</a></li>
+							<li class="inactive">Deutsche Telekom</li>
+							<li>Beeinflussung von Wahlen</li>
+						</ul>
+						<aside class="notes">Anfang November 2016 wurde kurz vo der US-Präsidentschaftswahl versucht, mittels Mirai über den Internetdienstleister Dyn zahlreiche hochfrequentierte Webdienste wie Twitter, Spotify und Amazon zum Erliegen zu bringen. </aside>
+					</section>
+
+					<section>
+						<h2>Enormer Anstieg von Angriffen</h2>
+						<h3>Riesige DDOS Attacken</h3>
+						<ul>
+							<li class="inactive">Mirai Botnet und das Internet der Dinge</li>
+							<li class="inactive"><a href="https://servercomparator.com/vpn/blog/dyn-mirai-ddos-complete-story">DYN</a></li>
+							<li class="inactive"><a href="http://www.telegraph.co.uk/technology/2016/11/04/unprecedented-cyber-attack-takes-liberias-entire-internet-down/">Liberia</a></li>
+							<li class="inactive">Deutsche Telekom</li>
+							<li class="inactive">Beeinflussung von Wahlen
+							<li>Oft nur 1 Angreifer</li>	
 						</ul>
 					</section>
+
 					<section>
 						<h2>Denial of Service in Action</h2>
 						<iframe data-src="http://map.norsecorp.com/#/explore"></iframe>
 					</section>
 					<section>
-						<h2>Was können wir tun?</h2>
+						<h2>Are we fucked?</h2>
 						<p><img data-src="https://i0.wp.com/www.tor.com/wp-content/uploads/2015/10/Frodo01.jpg?fit=740%2C%209999&crop=0%2C0%2C100%2C389px"></p>
 					</section>
 
 					<section>
-						<h2>Take action!</h2>
+						<h2>There is hope!</h2>
 						<p><img data-src="https://s-media-cache-ak0.pinimg.com/736x/0b/19/7e/0b197ec7220b5e03aeb96f17bbfc611c.jpg"></p>
 					</section>
 				</section>
@@ -150,12 +217,13 @@
 				<section>
 					<section data-background="#96b532">
 						<h1>Wie kann ich mich schützen?</h1>
+						<p>Einfach und günstig!</p>
 					</section>
 					<section data-background="#96b532">
 						<h1>HTTPS</h1>
-						<blockquote>Any new site or web application should be built with HTTPS out of the box.</blockquote>
-						<p>— Scott Helme</p>
-						<aside class="notes">Rüsten Sie Ihre Websites mit einem HTTPS Zertifikat auf. Hier eine </aside>
+						<blockquote>Jede neue Website sollte von Beginn an mit HTTPS gebaut werden.</blockquote>
+							<p>— Scott Helme</p>
+						<aside class="notes">Rüsten Sie Ihre Websites mit einem HTTPS Zertifikat auf. </aside>
 					</section>
 					<section>
 						<h2>HTTP</h2>
@@ -493,18 +561,18 @@ Sie greifen also nicht individuelle Benutzer an sondern versuchen von den Millio
 					<p>
 						reveal.js comes with a few themes built in: <br>
 						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>  -
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sunlime.css'); return false;">Sunlime</a>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/black.css'); return false;">Black (default)</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/white.css'); return false;">White</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/league.css'); return false;">League</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/sky.css'); return false;">Sky</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/beige.css'); return false;">Beige</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/simple.css'); return false;">Simple</a> <br>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/serif.css'); return false;">Serif</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/blood.css'); return false;">Blood</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/night.css'); return false;">Night</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/moon.css'); return false;">Moon</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/solarized.css'); return false;">Solarized</a>  -
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal.js/css/theme/sunlime.css'); return false;">Sunlime</a>
 					</p>
 				</section>
 
@@ -710,8 +778,8 @@ Reveal.addEventListener( 'customevent', function() {
 
 		</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+		<script src="../reveal.js/lib/js/head.min.js"></script>
+		<script src="../reveal.js/js/reveal.js"></script>
 
 		<script>
 
@@ -726,12 +794,12 @@ Reveal.addEventListener( 'customevent', function() {
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
+					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../reveal.js/plugin/notes/notes.js', async: true }
 				]
 			});
 
