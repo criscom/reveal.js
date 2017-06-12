@@ -40,13 +40,13 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
+				<section data-transition="fade-in fade-out">
 					<h2>Live preview</h2>
 					<iframe data-src="http://map.norsecorp.com/#/explore"></iframe>
 					<p>Globale Denial of Service Attacken</p>
 				</section>
 
-				<section>
+				<section data-transition="fade-in fade-out">
 					<h1>Herzlich Willkommen!</h1>
 					<h3>und Danke für die Einladung</h3>
 					<p>
@@ -62,34 +62,36 @@
 					</p>
 				</section>
 
-				<section>
+				<section data-transition="fade-in fade-out">
 					<h1>Christoph Potzinger</h1>
 					<h2>Sunline Web Innovations GmbH</h2>
 					<p>
 						<small> <a href="https://www.sunlime.at">https://www.sunlime.at</a> / <a href="http://twitter.com/sunlimeit">@sunlimeit</a></small>
 				</section>
 
-				<section>
+				<section data-transition="fade-in fade-out">
 					<h1>Überblick</h1>
 					<ul>
 						<li class="fragment">Wie sicher ist das Web?</li>
 						<li class="fragment">Was kann man tun?
 						<ul>
 							<li class="fragment">HTTPS</li>
+							<li class="fragment">Software Updates</li>
 							<li class="fragment">Passwörter</li>
 							<li class="fragment">Apps</li>
 						</ul>
 						</li>
 					</ul>
+					<aside class="notes">Wir werden uns ein paar Strategien und Arten von Angriffen anschauen.</aside>
 				</section>
 
-				<section>
+				<section data-transition="fade-in fade-out">
 					<h1>Zeitplan</h1>
 					<p>30 Minuten Präsentation</p>
 					<p>anschließend Fragen und Diskussion</p>
 				</section>
 
-				<section>
+				<section data-transition="fade-in fade-out">
 					<section data-background="#96b532">
 						<h1>Wie sicher ist das Web?</h1>
 					</section>
@@ -99,43 +101,43 @@
 						<p><img data-src="https://i.ytimg.com/vi/vkig1vyZXX8/maxresdefault.jpg"></p>
 					</section>
 
-					<section>
+					<section data-transition="fade-in fade-out">
 						<h2>Eher so!</h2>
 						<p><img data-src="https://atolkienistperspective.files.wordpress.com/2014/03/minas-morgul-orcs.jpg"></p>
 					</section>
-					<section>
+					<section data-transition="fade-in fade-out">
 						<h3>Verschiedene Strategien und Arten von Angriffen</h3>
-						<a href="https://www.rapid7.com/fundamentals/types-of-attacks/">Link</a>
 						<ul>
 							<li class="fragment">Malware</li>
 							<li class="fragment">Phishing</li>
-							<li class="fragment">SQL Einschleusung Angriff (SQL Injecion)</li>
+							<li class="fragment">SQL Einschleusung (SQL Injecion)</li>
 							<li class="fragment">Cross-Site Scripting (XSS)</li>
 							<li class="fragment">Session Hijacking und Man-in-the-Middle Attacks</li>
-							<li class="fragment">Wiederverwendung von Passwörtern</li>
+							<li class="fragment">Social engineering</li>
 							<li class="fragment">Denial of Service</li>
 						</ul>
 							<aside class="notes"><ul><li><strong>Malware:</strong> Antivirus Warnung im Browser, bösartiger E-Mail Anhang installiert Viren oder Ransomware am Computer</li>
-							<li><strong>Phishing:</strong> E-Mails mit Attachments oder Links. Ein Klick auf das Attachment installiert Malware auf dem Computer oder verschlüsselt die Daten am Computer</li>
-							<li><strong>SQL Injection</strong>: Über eine SQL Verwundbarkeit wird bösartiger Code in die Datenbank eingeschleust. Das kann zB über ein Suchformular erfolgen, in das der bösartige Code eingegeben und der SQL Server gezwungen wird, vertrauliche Daten auszugeben</li>
+							<li><strong>Phishing:</strong> Versuch vertrauliche Daten abzugreifen, in dem man zum Beispiel den Benutzer auf eine fingierte Website weiter leitet.</li>
+							<li><strong>SQL Injection</strong>: Über eine SQL (Structured Query Language) Verwundbarkeit wird bösartiger Code in die Datenbank eingeschleust. Das kann zB über ein Suchformular erfolgen, in das der bösartige Code eingegeben und der SQL Server gezwungen wird, vertrauliche Daten auszugeben</li>
 							<li><strong>XSS:</strong> Malware läuft nur im Browser des Besuchers und greift den Besucher direkt an, zB durch die Eingabe von bösartigem Code in einen Kommentar</li>
-							<li><strong>Session Hijacking</strong>: Wenn zwei Computer über das Internet miteinander kommunizieren, wird eine Session eröffnet, die eine einzigartige ID bekommt. Diese ID sollte vertraulich gehalten werden, da über diese ID sicher gestellt wird, dass man mit dem "richtigen" Adressat kommuniziert. In einer Man-in-the-Middle Attacke wird diese Session ID sozusagen entführt bzw gestohlen. Der Angreifer gibt sich nun als der entfernte Server aus und versucht so zu vertraulichen Informationen zu kommen.</li></ul>
+							<li><strong>Session Hijacking</strong>: Wenn zwei Computer über das Internet miteinander kommunizieren, wird eine Session eröffnet, die eine einzigartige ID bekommt. Diese ID sollte vertraulich gehalten werden, da über diese ID sicher gestellt wird, dass man mit dem "richtigen" Adressat kommuniziert. In einer Man-in-the-Middle Attacke wird diese Session ID sozusagen entführt bzw gestohlen. Der Angreifer gibt sich nun als der entfernte Server aus und versucht so zu vertraulichen Informationen zu kommen.</li>
+							<li><strong>Social engineering</strong>: durch zwischenmenschliche Beeinflussung versucht man bestimmte Verhaltensweisen hervorzurufen, um zum Beispiel zur Preisgabe von     vertraulichen Informationen oder zur Freigabe von Finanzmitteln zu bewegen. Social Engineering wird auch eingesetzt, um in fremde Computersysteme einzudringen.</li>
+    <li><strong>Denial of Service</strong>: Server und IT-Systeme werden mit einer so großen Anzahl von Anfragen beschossen bis sie ihren Dienst einstellen und Websites nicht mehr     aurufbar sind.</li></ul>
 
 							</aside>
 					</section>
 
-					<section>
-						<h2>Enormer Anstieg von Angriffen</h2>
-						<h3>Riesige DDOS Attacken</h3>
+					<section data-transition="fade-in fade-out">
+						<h2>Enormer Anstieg von DDOS Angriffen</h2>
 						<ul>
 							<li>Mirai Botnet und das Internet der Dinge</li>
 						</ul>
-						<aside class="notes"><p>Unter Mirai versteht man eine Linux-Schadsofware. Damit können Bot-Netze (= Gruppe automatisierter Schadprogramme) aufgebaut werden. Mit diesen lassen sich gezielte Attacken durch absichtliche Überlastungen von Netzen ausführen.</p> 
-						<p>Mirai nutzt die Tatsache aus, dass immer mehr Alltagsgegenstände wie Router, CCTV Überwachungssysteme, Digitale Video Recorder, Fernsehrer, DVD Player us mit dem Internet verbunden sind (Internet der Dinge).</p> 
+						<aside class="notes"><p>Unter Mirai versteht man eine Linux-Schadsoftware, mit derman Bot-Netze aufbauen kann (= Gruppe automatisierter Schadprogramme). Mit diesen lassen sich gezielte Attacken durch absichtliche Überlastungen von Netzen ausführen.</p> 
+						<p>Mirai nutzt die Tatsache aus, dass immer mehr Alltagsgegenstände wie Router, CCTV Überwachungssysteme, Digitale Video Recorder, Fernsehrer, DVD Player usw. mit dem Internet verbunden sind (Internet der Dinge).</p> 
 						<p>Die Software scannt das Netz nach Sicherheitslücken vor allem bei Internet der Dinge Geräten und versucht dann, Schadcode auf diese aufzuspielen.</p>
 					</section>
 
-					<section>
+					<section data-transition="fade-in fade-out">
 						<h2>Enormer Anstieg von Angriffen</h2>
 						<h3>Riesige DDOS Attacken</h3>
 						<ul>
@@ -145,12 +147,12 @@
 						<p class="fragment">Twitter offline</p>
 						<p class="fragment">Amazon offline</p>
 						<p class="fragment">Netflix offline</p>
-						<p class="fragment">Die größten Porno-Seiten: ONLINE ;)</p>
-						<aside class="notes"><p>Am 21. Oktober 2016 kam es unter Beteiligung des Bot-Netzes Mirai zu großangelegten DDoS-Angriffen auf die Firma Dyn. Viele große Webseiten, 	welche das DNS Service von Dyn nutzten, waren dadurch stundenlang nicht erreichbar.</p><p>Die einzigen großen Websites, die nicht davon betroffen waren, waren jene der 	Pornoindustrie – weil deren Webserver auf einen alternativen Anbieter umschalteten als Dyn nicht mehr erreichbar war.</p>
-						<p>DNS = Domain Name System; verantwortlich für die Übersetzung von lesbaren Website Namen/Domains wie zB www.sunlime.at in eine numberische, maschinenlesbare Internet 	Adresse. Jedes mal wenn man ein E-Mail versendet oder eine Website aufruft, sendet der Computer einen DNS Look-up request an den Internet Service Provider, um den 	Datenverkehr an die richtige Adresse zu routen.</p> </aside>
+						<p class="fragment">Die größten Porno-Seiten: ONLINE!</p>
+						<aside class="notes"><p>Am 21. Oktober 2016 wurde mit Mirai ein großangelegten DDoS-Angriffen auf die Firma Dyn durchgeführt. Viele große Webseiten, 	welche das DNS Service von Dyn nutzten, waren dadurch stundenlang nicht erreichbar.</p><p>Die einzigen großen Websites, die nicht davon betroffen waren, waren jene der 	Pornoindustrie – weil deren Webserver auf einen alternativen Anbieter umschalteten als Dyn nicht mehr erreichbar war.</p>
+						<p>DNS = Domain Name System; verantwortlich für die Übersetzung von lesbaren Website Namen/Domains wie zB www.sunlime.at in eine numerische, maschinenlesbare Internet 	Adresse. Jedes mal wenn man ein E-Mail versendet oder eine Website aufruft, sendet der Computer einen DNS Look-up request an den Internet Service Provider, um den 	Datenverkehr an die richtige Adresse zu routen.</p> </aside>
 						</section>
 
-					<section>
+					<section data-transition="fade-in fade-out">
 						<h2>Enormer Anstieg von Angriffen</h2>
 						<h3>Riesige DDOS Attacken</h3>
 						<ul>
@@ -161,63 +163,64 @@
 						</ul>
 					</section>
 
-					<section>
+					<section data-transition="fade-in fade-out">
 						<h2>Enormer Anstieg von Angriffen</h2>
 						<h3>Riesige DDOS Attacken</h3>
 						<ul>
 							<li class="inactive">Mirai Botnet und das Internet der Dinge</li>
 							<li class="inactive">21.10.2016: DYN mit Domino Effekt</li>
 							<li class="inactive">Liberia offline</li>
-							<li>Deutsche Telekom</li>
+							<li>Deutsche Telekom: 900.000 User offline</li>
 						</ul>
 						<aside class="notes">Der Hackerangriff auf DSL-Router der Deutschen Telekom am 27. November 2016 erfolgte ebenfalls über Mirai.</aside>
 					</section>
 
-					<section>
+					<section data-transition="fade-in fade-out">
 						<h2>Enormer Anstieg von Angriffen</h2>
 						<h3>Riesige DDOS Attacken</h3>
 						<ul>
 							<li class="inactive">Mirai Botnet und das Internet der Dinge</li>
 							<li class="inactive">21.10.2016: DYN mit Domino Effekt</li>
 							<li class="inactive">Liberia offline</li>
-							<li class="inactive">Deutsche Telekom</li>
+							<li class="inactive">Deutsche Telekom: 900.000 User offline</li>
 							<li>Beeinflussung von Wahlen</li>
 						</ul>
-						<aside class="notes">Anfang November 2016 wurde kurz vo der US-Präsidentschaftswahl versucht, mittels Mirai über den Internetdienstleister Dyn zahlreiche hochfrequentierte Webdienste wie Twitter, Spotify und Amazon zum Erliegen zu bringen. </aside>
+						<aside class="notes">Anfang November 2016 wurde kurz vor der US-Präsidentschaftswahl versucht, mittels Mirai über den Internetdienstleister Dyn zahlreiche hochfrequentierte Webdienste wie Twitter, Spotify und Amazon zum Erliegen zu bringen. </aside>
 					</section>
 
-					<section>
+					<section data-transition="fade-in fade-out">
 						<h2>Enormer Anstieg von Angriffen</h2>
 						<h3>Riesige DDOS Attacken</h3>
 						<ul>
 							<li class="inactive">Mirai Botnet und das Internet der Dinge</li>
 							<li class="inactive">21.10.2016: DYN mit Domino Effekt</li>
 							<li class="inactive">Liberia offline</li>
-							<li class="inactive">Deutsche Telekom</li>
+							<li class="inactive">Deutsche Telekom: 900.000 User offline</li>
 							<li class="inactive">Beeinflussung von Wahlen
 							<li>Oft nur 1 Angreifer</li>	
 						</ul>
 					</section>
 
-					<section>
+					<section data-transition="fade-in fade-out">
 						<h2>Denial of Service in Action</h2>
 						<iframe data-src="http://map.norsecorp.com/#/explore"></iframe>
 					</section>
-					<section>
+					<section data-transition="fade-in fade-out">
 						<h2>Are we fucked?</h2>
 						<p><img data-src="https://i0.wp.com/www.tor.com/wp-content/uploads/2015/10/Frodo01.jpg?fit=740%2C%209999&crop=0%2C0%2C100%2C389px"></p>
+						<aside class="notes">Im März gab es eine großangelgete, sich schnell verbreitende Attacke mittels Malware auf Windows Systemen, die nicht aktualisiert waren. Der Code dieser Malware hatte eine Art Notbremse installiert, die von einem jungen englischen Mann mehr durch Zufall gezogen wurde. Er hatte entdeckt, dass der Malware Code eine Domain enthielt, die nicht registriert war. Als er sie registrierte, stoppte er die Verbreitung der Malware.</aside>
 					</section>
 
-					<section>
-						<h2>There is hope!</h2>
+					<section data-transition="fade-in fade-out">
+						<h2>There is (still) hope!</h2>
 						<p><img data-src="https://s-media-cache-ak0.pinimg.com/736x/0b/19/7e/0b197ec7220b5e03aeb96f17bbfc611c.jpg"></p>
 					</section>
 				</section>
 
-				<section>
+				<section data-transition="fade-in fade-out">
 					<section data-background="#96b532">
 						<h1>Wie kann ich mich schützen?</h1>
-						<p>Einfach und günstig!</p>
+						<p>Ein paar wenige Dinge, die wir tun können!</p>
 					</section>
 					<section data-background="#96b532">
 						<h1>HTTPS</h1>
@@ -225,17 +228,17 @@
 							<p>— Scott Helme</p>
 						<aside class="notes">Rüsten Sie Ihre Websites mit einem HTTPS Zertifikat auf. </aside>
 					</section>
-					<section>
+					<section data-transition="fade-in fade-out">
 						<h2>HTTP</h2>
 						<h3>Hypertext Transfer Protocol</h3>
-						<p>Ungeschützter, unverschlüsselter Datenaustausch</p>
-						<aside class="notes">HTTP (Hypertext Transfer Protocol) ist das Standardprotokoll für das Bereitstellen von Websites und für den Datenaustausch. Jedoch erfolgt dieser Datenaustausch ungeschützt und nicht verschlüsselt.</aside>
+						<p>unverschlüsselter, ungeschützter Datenaustausch</p>
+						<aside class="notes">HTTP (Hypertext Transfer Protocol) ist das Standardprotokoll für das Bereitstellen von Websites und für den Datenaustausch. Jedoch erfolgt dieser Datenaustausch nicht verschlüsselt und ungeschützt.</aside>
 					</section>
 					<section data-transition="fade-in fade-out">
 						<h2>HTTPS</h2>
 						<h3>Hypertext Transfer Protocol Secure</h3>
 						<p>Schützt Datenaustausch durch TLS</p>
-						<aside class="notes">HTTPS kombiniert HTTP mit TLS (einem kryptografischen Protokoll) und schützt Daten, die über das Netz ausgetauscht werden, durch Verschlüsselung.</aside>
+						<aside class="notes">HTTPS kombiniert HTTP mit TLS (einem kryptografischen Protokoll; Transport Layer Security) und schützt Daten, die über das Netz ausgetauscht werden, durch Verschlüsselung.</aside>
 					</section>
 					<section data-transition="fade-in fade-out">
 						<h2> Warum HTTPS?</h2>
@@ -285,7 +288,7 @@
 							<li>Sicherer als HTTP
 							<ul>
 								<li class="inactive">1. Unterbindet Inhaltseinschleusungen von Dritten</li>
-								<li>2. Unterbindet Malware Einschleusung</li>
+								<li>2. Erschwert Malware Einschleusung</li>
 							</ul>
 							</li>
 						</ul>
@@ -332,13 +335,8 @@
 								<tr><th>Quelle</th><th>Ziel</th><th>Verweis</th></tr>
 							</thead>
 						<tbody>
-						<tr>
-							<td><a href="https://scotthelme.co.uk/blog1/">https://www.sunlime.at/blog1/</a></td><td><a href="http://www.sunlime.at/blog2/">http://www.sunlime.at/blog2/</a></td><td>						NULL</td></tr>
-						<tr><td><a href="https://www.sunlime.at/blog1/">https://www.sunlime.at/blog1/</a></td><td><a href="https://www.sunlime.at/blog2/">https://www.sunlime.at/blog2/</a></td><td						><a href="https://www.sunlime.at/blog1/">https://www.sunlime.at/blog1/</a></td></tr>
-						<tr><td><a href="http://www.sunlime.at/blog1/">http://www.sunlime.at/blog1/</a></td><td><a href="http://www.sunlime.at/blog2/">http://www.sunlime.at/blog2/</a></td><td><a 						href="http://www.sunlime.at/blog1/">http://www.sunlime.at/blog1/</a></td></tr>
-						<tr><td><a href="http://www.sunlime.at/blog1/">http://www.sunlime.at/blog1/</a></td><td><a href="http://example.com">http://example.com</a></td><td><a href="http://						www.sunlime.at/blog1/">http://www.sunlime.at/blog1/</a></td></tr>
-						<tr><td><a href="http://www.sunlime.at/blog1/">http://www.sunlime.at/blog1/</a></td><td><a href="https://example.com">https://example.com</a></td><td><a href="http://						www.sunlime.at/blog1/">http://www.sunlime.at/blog1/</a></td></tr>
-						<tr><td><a href="https://www.sunlime.at/blog1/">https://scotthelme.co.uk/blog1/</a></td><td><a href="http://example.com">http://example.com</a></td><td>NULL</td></tr>
+						<tr><tr><td><a href="http://www.sunlime.at/blog1/">http://www.sunlime.at/blog1/</a></td><td><a href="http://www.sunlime.at/blog2/">http://www.sunlime.at/blog2/</a></td><td><a href="http://www.sunlime.at/blog1/">http://www.sunlime.at/blog1/</a></td></tr>
+						<tr><td><a href="https://www.sunlime.at/blog1/">https:///www.sunlime.at/blog1/</a></td><td><a href="http://example.com">http://example.com</a></td><td>NULL</td></tr>
 						</tbody>
 						</table>
 						<aside class="notes">Wenn die Website, die ein Besucher verlässt, auf HTTPS läuft und auf eine Website wechselt, die auf HTTP läuft, dann liefert der Browser keinen Seitenverweis aus und hilft dabei, sensitive Daten zu schützen (weil diese ja auf der HTTP Seite für jedermann sichtbar wären).
@@ -348,59 +346,67 @@
 					<section data-transition="fade-in fade-out">
 						<h2> Vorteile von HTTPS im Überblick</h2>
 						<ul>
-							<li>Schneller als HTTP</li>
-							<li>Sicherer als HTTP</li>
-							<li>Besere SEO Rankings</li>
-							<li>Keine Browserwarnungen</li>
-							<li>Mehr Funktionen</li>
-							<li>Bessere Seitenverweisen</li>
+							<li class="fragment">Schneller als HTTP</li>
+							<li class="fragment">Sicherer als HTTP</li>
+							<li class="fragment">Bessere SEO Rankings</li>
+							<li class="fragment">Keine Browserwarnungen</li>
+							<li class="fragment">Mehr Funktionen</li>
+							<li class="fragment">Bessere Seitenverweisen</li>
 						</ul>
-						<aside class="notes">Wenn die Website, die ein Besucher verlässt, auf HTTPS läuft und auf eine Website wechselt, die auf HTTP läuft, dann liefert der Browser keinen Seitenverweis aus und hilft dabei, sensitive Daten zu schützen (weil diese ja auf der HTTP Seite für jedermann sichtbar wären).
+						<aside class="notes">
 						</aside>
 					</section>
 
 				</section> <!-- End of 1st chapter HTTPS -->
-
+					<section data-transition="fade-in fade-out">
+						<h2> Halten Sie Ihre Software aktuell!</h2>
+						<ul>
+							<li>Auf Ihrem Computer</li>
+							<li>Auf Ihrer Website</li>
+						</ul>
+						<aside class="notes">
+						</aside>
+					</section>
 				<section data-transition="fade-in fade-out" data-background="#2fa63e">
 				<h2>Tipp für alle Websitebesitzer unter Ihnen</h2>
-				<blockquote class="fragment">Sorgen Sie dafür, dass das Redaktionssystem und alle verwendeten Plugins und Module regelmäßig aktualisiert werden!</blockquote>
-				<p class="fragment">Nur eine kleine Investition, die enormen Schaden verhindern kann!</p>
-				<p class="fragment">Oder Sie machen es selbst!</p>
+				<blockquote class="fragment">Sorgen Sie dafür, dass das Redaktionssystem und alle verwendeten Plugins und Module regelmäßig aktualisiert werden und Updates möglichst zeitnah eingespielt werden!</blockquote>
+				
 				</section>
 
-				<section>
+				<section data-transition="fade-in fade-out">
 					<section data-background="#96b532">
 						<h1>Passwörter</h1>
 						<blockquote>Wichtiger als die Länge ist uns, dass wir uns an unsere Passwörter erinnern können. Und genau das ist das Problem!</blockquote>
-						<aside class="notes">Während uns bewusst ist, dass Passwörter ein Sicherheitsrisiko darstellen, verwenden die Wenigsten  von uns 14 Zeichen starke Passwörter mit Sonderzeichen, Groß- und Kleinschreibung und Phrasen, die in keinem Wörterbuch stehen.</aside>
+						<aside class="notes">Wer verwendet 14 Zeichen starke Passwörter mit Sonderzeichen, Groß- und Kleinschreibung und Phrasen, die in keinem Wörterbuch stehen?
+</aside>
 					</section>
 
-					<section>
+					<section data-transition="fade-in fade-out">
 						<h2>Die Komprimitierung von Passwörtern</h2>
 						<ul>
 							<li>Password lockouts: Trügerische Sicherheit</li>
 						</ul>
-						<aside class="notes"><p>Wir fühlen uns relativ sicher, weil wir glauben, dass Hacker auf eine Website gehen, den Benutzernamen eingeben und versuchen, dass Passwort durch mehrfache Eingabe zu erraten.</p><p> Wir fühlen uns deshalb so sicher, weil wir uns selbst schon so oft selbst aus unseren Konten ausgesperrt haben, weil wir das Passwort falsch eingegeben oder sogar vergessen hatten.</p></aside>
+						<aside class="notes"><p>Wir fühlen uns relativ sicher, weil wir glauben, dass Hacker auf eine Website gehen, den Benutzernamen eingeben und versuchen, dass Passwort durch mehrfache Eingabe zu erraten.</p><p> Wir fühlen uns deshalb so sicher, weil wir uns selbst schon so oft aus unseren Konten ausgesperrt haben, weil wir das Passwort falsch eingegeben oder sogar vergessen hatten.</p></aside>
 					</section>
 
-					<section>
-						<h2>Die Komprimitierung von Passwörtern</h2>
+					<section data-transition="fade-in fade-out">
+						<p>Die Komprimitierung von Passwörtern</p>
 						<ul>
 							<li>Password lockouts: Eine trügerische Sicherheit</li>
 						</ul>
 						<aside class="notes">Wir glauben, dass es den Hackern gleich ergeht. Nach drei Versuchen werden sie, so wie wir, automatisch ausgesperrt - glauben wir - und wiegen uns in trügerischer Sicherheit.</aside>
 					</section>
 
-					<section>
-						<h2>Die Komprimitierung von Passwörtern</h2>
+					<section data-transition="fade-in fade-out">
+						<p>Die Komprimitierung von Passwörtern</p>
 						<ul>
 							<li>Password lockouts sind kein Schutz mehr</li>
 						</ul>
 						<aside class="notes">Lockouts nach 3 oder 5-maligen Fehlversuchen und ähnliche Schutzmaßnahmen stellen mittlerweile Hacker vor keine großen Probleme mehr. Sie wissen den Benutzername und das Passwort bereits bevor sie auf die Anmeldeseite der Website kommen. Denn sie haben das Passwort bereits Stunden, Tage oder Monate vorher offline gehackt.</aside>
 					</section>
 
-					<section>
-						<h2>Die Komprimitierung von Passwörtern</h2>
+					<section data-transition="fade-in fade-out">
+						<p>Die Komprimitierung von Passwörtern</p>
 						<ul>
 							<li>Offline Angriffe sind ein Paradies für Hacker</li>
 						</ul>
@@ -408,8 +414,8 @@
 					</section>
 
 
-					<section>
-						<h2>Die Komprimitierung von Passwörtern</h2>
+					<section data-transition="fade-in fade-out">
+						<p>Die Komprimitierung von Passwörtern</p>
 						<ul>
 							<li>Der typische offline Password Hack</li>
 						</ul>
@@ -417,17 +423,23 @@
 						<aside class="notes">Der typische offline Passwort Hack erfolgt über eine Datenbank, die der Hacker über einen Einbruch auf einem Server gestohlen hat. Dabei zielt der Angreifer nicht auf individuelle Kontoinhaber ab, sondern auf die Menge und versucht einige wenige Passwörter zu entschlüsseln und darüber Zugang auf viele Konten zu erhalten.</aside>
 					</section>
 
-					<section>
-						<h2>Die Komprimitierung von Passwörtern</h2>
+					<section data-transition="fade-in fade-out">
+						<p>Die Komprimitierung von Passwörtern</p>
 						<h3>Hashfunktionen und Passwörter</h3>
 						<pre><code>echo "sunlime" | openssl sha1
 949c913bef2ef05a8ce3d5cb9886d075ca7680d0</code></pre>
 						<p> sunlime => 949c913bef2ef05a8ce3d5cb9886d075ca7680d0</p>
-						<aside class="notes"><p>Passwörter werden niemals als Reintext in Datenbanken gespeichert sondern werden über eine kryptographische Hashfunktion verschlüsselt.</p> <p>Ein Hash ist ein Algorythmus, der eine Wort in eine nicht wieder erkennbare Zeichenkette mit einer bestimmten Länge verwandelt.</p><p> Die Idee ist, dass man eine gehashte Verson des Passwortes bedenkenlos in einer Datenbank speichern kann. Außerdem gibt es keine kryptografische Möglichkeit, aus einer gehashten Zeichenkette das ursprüngliche Wort wiederherzustellen.</p></aside>
+						<aside class="notes"><p>Passwörter werden niemals als Reintext in Datenbanken gespeichert sondern werden über eine kryptographische Hashfunktion verschlüsselt.</p> <p>Ein Hash ist ein Algorythmus, der ein Wort in eine nicht wieder erkennbare Zeichenkette mit einer bestimmten Länge verwandelt.</p><p> Die Idee ist, dass man eine gehashte Version des Passwortes bedenkenlos in einer Datenbank speichern kann. Außerdem gibt es keine kryptografische Möglichkeit, aus einer gehashten Zeichenkette das ursprüngliche Wort wiederherzustellen.</p></aside>
 					</section>
-
-					<section>
-						<h2>Die Komprimitierung von Passwörtern</h2>
+					<section data-transition="fade-in fade-out">
+						<p>Die Komprimitierung von Passwörtern</p>
+						<h3>Hashfunktionen und Passwörter</h3>
+						<p> 14 * 18 * 29 = 7.308</p>
+						<p> 7.308 = ?</p>
+						<aside class="notes"><p>Außerdem gibt es keine kryptografische Möglichkeit, aus einer gehashten Zeichenkette das ursprüngliche Wort wiederherzustellen. Gleich wie es nicht möglich ist, aus dem Produkt einer Multiplikation, auf die Faktoren zu schließen.</p></aside>
+						</section>
+					<section data-transition="fade-in fade-out">
+						<p>Die Komprimitierung von Passwörtern</p>
 						<h3>Hashfunktionen und Passwörter</h3>
 						<pre><code>echo "sunlime" | openssl sha1
 949c913bef2ef05a8ce3d5cb9886d075ca7680d0</code></pre>
@@ -435,40 +447,41 @@
 88fc0d6348ed734268a4a92e8e30698cb0854fd1</code></pre>
 						<p> sunlime => 949c913bef2ef05a8ce3d5cb9886d075ca7680d0</p>
 						<p> sunli<strong>n</strong>e => 88fc0d6348ed734268a4a92e8e30698cb0854fd1</p>
-						<aside class="notes">Eine weitere Eigenschaft eines Hashes ist, dass eine kleinere Änderungen im Reintext eine große Änderung im gehashte String bedingt.<br />
+						<aside class="notes">Eine weitere Eigenschaft eines Hashes ist, dass eine kleine Änderungen im Reintext eine große Änderung im gehashten String bedingt.<br />
 						Dadurch wird es unmöglich, sich an ein Passwort durch schrittweises Ausprobieren von Zeichen anzunähern. D.h. man kann aus dem Hash von "sunlime" niemals auf den Hash von "sunline" schließen.</aside>
 					</section>
 
-					<section>
-						<h2>Die Komprimitierung von Passwörtern</h2>
+					<section data-transition="fade-in fade-out">
+						<p>Die Komprimitierung von Passwörtern</p>
 						<h3>Wie gehen Hacker vor?</h3>
 						<p>Sie vergleichen Hash Werte in gestohlenen Datenbanken.</p>
 						<aside class="notes"><p>Die komprimitierte Datenbank enthält die Benutzernamen in Reintext und die zugehörigen Passwörter als Hash Wert. Die Hacker wenden nun den in der Datenbank für die Verschlüsselung von Passwörtern verwendeten Hash Algorythmus auf ein beliebiges Passwort an.</p><p> Dann vergleichen sie den Hash Wert dieses Passworts mit den in der Datenbank enthaltenen Hash Werten. Wenn sie in der Datenbank diesen Hash Wert finden, dann haben sie einen Treffer gelandet und der Benutzer hat ein Problem.</p><p>Sie greifen also nicht individuelle Benutzer an sondern versuchen von den Millionen von Benutzern in der Datenbank Passwörter zu entschlüsseln. Das heißt, sie zielen auf die niedrig hängenden Früchte ab.</p></aside>
 					</section>
 
-					<section>
-						<h2>Die Komprimitierung von Passwörtern</h2>
+					<section data-transition="fade-in fade-out">
+						<p>Die Komprimitierung von Passwörtern</p>
 						<h3>Passwort Wörterbücher</h3>
 
 						<aside class="notes">Um den Prozess weiter zu beschleunigen, setzen Hacker Wörterbücher ein. Sie wissen, dass wir eher Passwörter wählen, an die wir uns erinnern können.</aside>
 					</section>
 
-					<section>
-						<h2>Die Komprimitierung von Passwörtern</h2>
+					<section data-transition="fade-in fade-out">
+						<p>Die Komprimitierung von Passwörtern</p>
 						<h3>Hochentwickelte Hackingtechniken und neue Wörterbücher</h3>
+						<h3 class="fragment">Brute Force</h3>
 						<aside class="notes">Fortgeschrittene Hacker studieren wie Menschen Passwörter auswählen und erstellen daraus neue Wörterbücher, die noch effektiver sind als normale Wörterbücher.</aside>
 					</section>
 
-					<section>
-						<h2>Die Komprimitierung von Passwörtern</h2>
+					<section data-transition="fade-in fade-out">
+						<p>Die Komprimitierung von Passwörtern</p>
 						<h3>Gestohlene Datenbanken</h3>
 						<p class="fragment">Juni 2012: 6,4 Mio LinkedIn Passwörter</p>
 						<p class="fragment">Dezember 2009: 32 Millionen RockYou.com Passwörter</p>
-						<aside class="notes">Der Einbruch in RockYou eröffnete den Hackern einen Blick in die Art und Weise, wie Menschen Passwörter wählen.</aside>
+						<aside class="notes">Der Einbruch in Onlineplattformen eröffnete den Hackern einen Blick in die Art und Weise, wie Menschen Passwörter wählen.</aside>
 					</section>
 
-					<section>
-						<h2>Die Komprimitierung von Passwörtern</h2>
+					<section data-transition="fade-in fade-out">
+						<p>Die Komprimitierung von Passwörtern</p>
 						<h3>RockYou Passwörter</h3>
 						<p class="fragment">"12345" od "123456" bei jedem 100. Benutzer</p>
 						<p class="fragment">Weniger als 6 Stellen bei jedem 3. Benutzer</p>
@@ -476,8 +489,8 @@
 						<aside class="notes">Der Einbruch in RockYou eröffnete den Hackern einen Blick in die Art und Weise, wie Menschen Passwörter wählen.</aside>
 					</section>
 
-					<section>
-						<h2>Die Komprimitierung von Passwörtern</h2>
+					<section data-transition="fade-in fade-out">
+						<p>Die Komprimitierung von Passwörtern</p>
 						<h3>RockYou Passwörter</h3>
 						<table>
 						<thead>
@@ -516,14 +529,14 @@
 					</section>
 
 
-					<section>
+					<section data-transition="fade-in fade-out">
 						<h2>Passwörter stärken</h2>
 						<p class="fragment">1. Anzahl der Zeichensätze: alpha-numerisch, groß/klein, Symbole</p>
 						<p class="fragment">2. Anzahl der Zeichen</p>
 						<aside class="notes"></aside>
 					</section>
 
-					<section>
+					<section data-transition="fade-in fade-out">
 						<h2>Passwörter stärken</h2>
 						<p>Auswirkung von der Erhöhung von Zeichensätzen bei vierstelligen Passwörtern</p>
 						<table>
@@ -550,8 +563,13 @@
 						<aside class="notes">Mit Vergrößerung der Zeichensätze steigt die Stärke des Passwortes.</aside>
 					</section>
 
+					<section data-transition="fade-in fade-out">
+					<h2>900 Microsekunden</h2>
+					<p>um ein 4-stelliges Passwort mit Klein- und Großbuchstaben, Zahlen, und Symbole zu knacken!</p>
+					<p class="fragment">900 Microsekunden = 0,0009 Sekunden</p>
+					</section>
 
-					<section>
+					<section data-transition="fade-in fade-out">
 						<h2>Passwörter stärken</h2>
 						<p>Exponentielle Steigerung der Stärke mit jedem zusätzlichen Zeichen</p>
 						<small>Klein-/Großbuchstaben und Zahlen</small>
@@ -572,33 +590,63 @@
 								<td>6 Zeichen</td><td>62^6</td><td class="align-right">56.800.000.000</td>
 							</tr>
 							<tr class="fragment">
-								<td>7 Zeichen</td><td>62^7</td><td class="align-right">218.340.110.000.000</td>
+								<td>7 Zeichen</td><td>62^7</td><td class="align-right">3.521.614.606.208</td>
+							</tr>
+							<tr class="fragment">
+								<td>8 Zeichen</td><td>62^8</td><td class="align-right">218.340.110.000.000</td>
 							</tr>
 						</tbody>
 						</table>
 						<aside class="notes">Die Anzahl der Zeichen ist ebenfalls wichtig für die Stärke. Mit jedem zusätzlichen Zeichen steigt die Stärke exponentiell</aside>
 					</section>
 
-					<section>
+					<section data-transition="fade-in fade-out">
 						<h2>Schlechte Passwörter</h2>
+						<p class="fragment">Passwort</p>
 						<p class="fragment">GottfrieD</p>
 						<p class="fragment">Gottfried1966</p>
 						<p class="fragment">G0ttfr1ed!</p>
 						<p class="fragment">Gottfried@Facebook</p>
-						<p class="fragment">Gottfried&Sandra</p>
 						<p class="fragment">asdfghj</p>
 					</section>
 
-					<section>
+					<section data-transition="fade-in fade-out">
+						<h2>Schlechte Passwörter</h2>
+						<p>Passwort</p>
+						<p>asdfghj</p>
+						<p class="fragment"><img data-src="https://www.evernote.com/l/ARBpWiX2ZCRD34Wi3Yy-IsN7st_AY3Zv5g8B/image.png"></p>
+					</section>
+
+					<section data-transition="fade-in fade-out">
+						<h2>Schlechte Passwörter</h2>
+						<p>GottfrieD</p>
+						<p class="fragment"><img data-src="https://www.evernote.com/l/ARD4hFpl_ghBdbuLQ37J8GJ5qKxTwyjNXB4B/image.png"></p>
+					</section>
+
+					<section data-transition="fade-in fade-out">
+						<h2>Schlechte Passwörter</h2>
+						<p>Gottfried1966</p>
+						<p class="fragment"><img data-src="https://www.evernote.com/l/ARDUPWGV035DfonMP0RROLs3Hqfuceb2hTsB/image.png"></p>
+						<aside class="notes">Warum ist das trotzdem ein schlechtes Passwort? Name kombiniert mit Jahreszahl</aside>
+					</section>
+
+					<section data-transition="fade-in fade-out">
+						<h2>Gutes Passwort</h2>
+						<p>biEr-powering-snarl-sputnik-artfu$l-entitle-fighter1-wiseacre-waxen</p>
+						<p class="fragment"><img data-src="https://www.evernote.com/l/ARDUwkgeH-9NNYQUGxV1lsHKMNifTcYjTLEB/image.png"></p>
+						<aside class="notes"><ul><li>Groß-Kleinschreibung, Zahlen, Sonderzeichen</li><li>67 Zeichen lang</li><li>Vermischung von Dictionaries</li></ul></aside>
+					</section>
+
+					<section data-transition="fade-in fade-out">
 						<h2>Keine gute Idee</h2>
 						<p class="fragment">Passwörter auf Papier festhalten</p>
 						<p class="fragment">Passwörter wieder verwenden</p>
-						<p class="fragment">Passwörter im Browser speichern!</p>
+						<p class="fragment">Passwörter im Browser speichern</p>
 						<p class="fragment">Passwörter über lange Perioden unverändert lassen</p>
-						<p class="fragment">Passwörter über E-Mail versenden</p>
+						<p class="fragment">Passwörter per E-Mail versenden</p>
 					</section>
 
-					<section>
+					<section data-transition="fade-in fade-out">
 						<h2>Tipps für die Wahl von Passwörtern</h2>
 						<p class="fragment">Möglichst viele Zeichensätze verwenden</p>
 						<p class="fragment">Möglichst lange Passwörter verwenden</p>
@@ -609,7 +657,7 @@
 					</section>
 
 
-					<section>
+					<section data-transition="fade-in fade-out">
 						<h2>Tipps für das Passwort Management</h2>
 						<p class="fragment">Passwort Autocomplete Funktion im Webbrowser deaktivieren</p>
 						<p class="fragment">Passwörter oft ändern<sup>*</sup></p>
@@ -619,16 +667,43 @@
 						<aside class="notes">Ändern des Passwortes wenn es über ein öffentliches WLAN verwendet wurde - vor allem bei HTTP Websites</aside>
 					</section>
 
-					<section>
+					<section data-transition="fade-in fade-out">
 						<h2>Passwort Manager</h2>
 						<p class="fragment">LastPass (Windows)</p>
+						<p class="fragment">KeePass (Windows)</p>
 						<p class="fragment">1Password (Mac)</p>
-						<p class="fragment">KeePass (Windows</p>
 						<p class="fragment">Dashlane.com</p>
 					</section>
 
 				</section> <!-- End of 2nd chapter Passwörter -->
+				<section data-background="#96b532">
+					<h2>Wie kann ich mich schützen?</h2>
+					<ul>
+					<li class="fragment">HTTPS</li>
+					<li class="fragment">Software Updaten</li>
+					<li class="fragment">Passwörter</li>
+					<li class="fragment">Vorsichtig und skeptisch sein!</li>
+					</ul>
+				</section>
 
+				<section data-transition="fade-in fade-out" data-background="#2fa63e">
+					<blockquote>Das Web ist eine gefährliche Welt (geworden)! Vorsicht!</blockquote>
+					<p><img data-src="https://atolkienistperspective.files.wordpress.com/2014/03/mordor-orcs.jpg"</p>
+				</section>
+				<section data-transition="fade-in fade-out">
+					<h2>Ihr Hanout finden Sie auf</h2>
+					<p>https://www.sunlime.at/sicherheit-im-netz/</p>
+				</section>
+				<section data-transition="fade-in fade-out">
+					<h1>Herzlich Dank!</h1>
+					<p><img style="border:none;" data-src="https://www.sunlime.at/wp-content/themes/sunlime/assets/img/sunlime-logo-new.svg"></p>
+				</section>
+				<section data-transition="fade-in fade-out">
+					<h1>Christoph Potzinger</h1>
+					<p>+43 664 10 40 590</p>
+					<p>christoph.potzinger@sunlime.at</p>
+					<p>https://www.sunlime.at/sicherheit-im-netz/</p>
+				</section>
 			</div>
 
 		</div>
